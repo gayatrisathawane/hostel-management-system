@@ -6,6 +6,9 @@ import SignUp from './view/SignUp/SignUp'
 import Login from './view/Login/Login'
 import Contact from './view/Contact/Contact'
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+
 
 import {
   createBrowserRouter,
