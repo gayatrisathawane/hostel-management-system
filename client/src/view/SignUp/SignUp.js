@@ -1,13 +1,12 @@
 import React from 'react'
 
-const App = () => {
+const SignUp = () => {
   return (
     <div>
-
-      <h1>Appp</h1>
+        <h1>SignUp</h1>
       
     </div>
   )
 }
 
-export default App
+export default SignUp
