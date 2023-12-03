@@ -20,15 +20,15 @@ const Navbar = () => {
           <Link className="nav-link fs-4 active ms-4" to="#">Rooms</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link fs-4 active ms-4" to="/signup">Contact</Link>
+          <Link className="nav-link fs-4 active ms-4" to="/contact">Contact</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link fs-4 active ms-4" to="/signup">About us </Link>
+          <Link className="nav-link fs-4 active ms-4" to="/aboutus">About us </Link>
         </li>
         
       </ul>
       <button className="btn btn-outline-primary ms-5 p-2 fs-5 ">
-          <Link className="nav-link  active "  to="/login">SignUp</Link>
+          <Link className="nav-link  active "  to="/signup">SignUp</Link>
         </button><br/><br/>
     
          

@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="row">
        
         <div className="col-lg-6 col-md-12 mb-4 mb-md-0">
-          <h5 className="text-uppercase">HOSTELBOOK</h5><br/>
+          <h5 className="text-uppercase fs-4">HOSTELBOOK</h5><br/>
   
           <p className='fs-5'>
           A hostel is a lower-priced inn of sorts that offers basic, shared accommodations. Typically, a hostel features a large room with separate beds, a shared bathroom, and a communal kitchen. Some hostels have private rooms, but the lower-cost ones generally offer bunk beds
@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
       
         <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 className="text-uppercase">Quick Links</h5><br/>
+          <h5 className="text-uppercase fs-4">Quick Links</h5><br/>
   
           <ul className="list-unstyled mb-0">
             <li>
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
        
         <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 className="text-uppercase mb-0">Contact Us </h5><br/>
+          <h5 className="text-uppercase mb-0 fs-4">Contact Us </h5><br/>
   
           <ul className="list-unstyled">
             <li>
