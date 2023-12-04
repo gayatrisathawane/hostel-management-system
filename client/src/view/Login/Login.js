@@ -7,7 +7,7 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const Login = async () => {
-      const response = await axios.post("/login", {
+      const response = await axios.post("api/login", {
           email: email,
           password: password
       }); 
@@ -30,7 +30,7 @@ function Login() {
   }, [])
   return (
 
-      <div className="bacground-image">
+      <div>
           <Navbar />
           <from className="login-from">
               <h1 className="text-center">Login</h1>
