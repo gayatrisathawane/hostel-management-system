@@ -14,6 +14,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Room from './view/Room/Room';
 
 
 const router = createBrowserRouter([
@@ -22,8 +23,8 @@ const router = createBrowserRouter([
     element: <Home/>,
   },
   {
-    path: "/",
-    element: <Home/>,
+    path: "/room",
+    element: <Room/>,
   },
   {
     path: "/signup",

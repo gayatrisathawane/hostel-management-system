@@ -14,7 +14,7 @@ function Signup() {
 
   const signupUser = async () => {
     if (!name) {
-      alert("Nmae is requred");
+      alert("Name is requred");
       return;
     }
     if (!mobile) {
