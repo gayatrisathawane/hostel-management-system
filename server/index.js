@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import express  from "express";
-import RoomCard from "./mod/RoomCard";
+import RoomCard from "./models/RoomCard.js";
 import dotenv from 'dotenv'
 import dotenv from 'dotenv';
 // import User from "./models/user.js";
@@ -41,10 +41,8 @@ app.post('/api/login', postApiLogin)
 
 app.post('/api/v1/reviews',postapireview)
 app.get('/api/v1/reviews',getapireview)
-
-
-
-    const { title, description,candidate, price, type, stars, image } = req.body
+app.post('/room', async (req, res) => {   
+const { title, description,candidate, price, type, stars, image } = req.body
   
     const RoomCard = new RoomCard({
       title: title,
@@ -61,6 +59,7 @@ app.get('/api/v1/reviews',getapireview)
       data: saveRoomCard,
       message: "Product added successfully"
     })
+})
 
 app.listen(PORT ,()=>{
     console.log(`server is running ${PORT} `);
