@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import express  from "express";
-import RoomCard from "./mod/RoomCard";
 import dotenv from 'dotenv'
 dotenv.config()
 
@@ -8,44 +7,29 @@ const app = express()
 
 app.use(express.json())
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 5000
 
 
 //connection of mongodb 
 
 
-const mongoDb = async()=>{
+const mongoDb = async () => {
+    try {
+        const connect = await mongoose.connect(process.env.MONGO_DB)
 
-    const connect = await mongoose.connect(process.env.MONGO_DB)
-
-    if(connect){
-        console.log("mongo db connect ")
+        if (connect) {
+            console.log("MongoDB connected successfully")
+        }
+    } catch (error) {
+        console.log(error)
     }
 }
 mongoDb()
 
 
-app.post('/room', async (req, res) => {
 
-    const { title, description,candidate, price, type, stars, image } = req.body
-  
-    const RoomCard = new RoomCard({
-      title: title,
-      description: description,
-      price: price,
-      type: type,
-      candidate:candidate,
-      stars: stars,
-      image: image
-    })
-    const saveRoomCard = await RoomCard.save();
-    res.json({
-      success: true,
-      data: saveRoomCard,
-      message: "Product added successfully"
-    })
-  })
 app.listen(PORT ,()=>{
-    console.log(`app listen on port ${PORT} `)
-})
+    console.log(`server is running ${PORT} `);
+    
+});
 

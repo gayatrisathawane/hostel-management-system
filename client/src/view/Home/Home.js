@@ -1,10 +1,48 @@
-import React from 'react'
+import React, { useState,useEffect } from 'react'
 import Navbar from '../../component/Navbar/Navbar'
 import './Home.css'
 import Footer from '../../component/Footer/Footer'
+import axios from 'axios'
+import user from './user.png'
 
 
 const Home = () => {
+  const user = JSON.parse(localStorage.getItem('user') ||'{}')
+
+  const[reviews ,setReview]=useState([])
+
+  const [description,setDescription]=useState('')
+  const[rating,setRating]=useState('')
+
+
+  const loadAllReview = async() =>{
+
+    const response = await axios.get('api/v1/reviews')
+
+    console.log(response?.data?.data)
+
+   setReview(response?.data?.data)
+
+  }
+
+
+  useEffect(()=>{
+    loadAllReview()
+
+  },[])
+
+  // const Postreview = async()=>{
+
+  //   const response = await axios.post('api/v1/reviews',{
+  //     user:user._id,
+  //     description:description,
+  //     rating:rating
+
+  //   })
+
+  //   alert(response?.data?.message)
+
+  // }
   return (
     <div>
       <Navbar />
@@ -33,6 +71,30 @@ const Home = () => {
 
         </div>
       </div><br/>
+
+
+      <div>
+        <h1 className='text-center'>Customer review</h1>
+
+  <div className='d-flex justify-content-evenly flex-wrap'>
+  {
+        reviews?.map((review,i)=>{
+
+          return(
+            <div  className='container-review' >
+               <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png"  height="70px"alt="user"/>  <span className='fs-4'>{review.user.name}</span>
+               <p>{review.description}</p>
+               <h3>{review.rating}</h3>
+            </div>
+           
+          )
+        })
+      }
+  </div>
+     
+     
+         
+      </div>
     <Footer/>
     </div>
   )
