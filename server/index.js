@@ -1,6 +1,12 @@
 import mongoose from "mongoose";
 import express  from "express";
+import RoomCard from "./mod/RoomCard";
 import dotenv from 'dotenv'
+import dotenv from 'dotenv';
+// import User from "./models/user.js";
+import {postApiLogin, postApiSignup} from './controlers/transaction.js'
+import{postapireview,getapireview} from './controlers/Review.controller.js'
+
 dotenv.config()
 
 const app = express()
@@ -24,9 +30,37 @@ const mongoDb = async () => {
         console.log(error)
     }
 }
-mongoDb()
 
 
+// post signup
+app.post('/api/signup', postApiSignup )
+
+//post login
+app.post('/api/login', postApiLogin)
+
+
+app.post('/api/v1/reviews',postapireview)
+app.get('/api/v1/reviews',getapireview)
+
+
+
+    const { title, description,candidate, price, type, stars, image } = req.body
+  
+    const RoomCard = new RoomCard({
+      title: title,
+      description: description,
+      price: price,
+      type: type,
+      candidate:candidate,
+      stars: stars,
+      image: image
+    })
+    const saveRoomCard = await RoomCard.save();
+    res.json({
+      success: true,
+      data: saveRoomCard,
+      message: "Product added successfully"
+    })
 
 app.listen(PORT ,()=>{
     console.log(`server is running ${PORT} `);
