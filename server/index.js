@@ -30,6 +30,8 @@ const mongoDb = async () => {
     }
 }
 
+mongoDb()
+
 
 // post signup
 app.post('/api/signup', postApiSignup )

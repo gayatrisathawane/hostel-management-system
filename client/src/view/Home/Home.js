@@ -31,18 +31,18 @@ const Home = () => {
 
   },[])
 
-  // const Postreview = async()=>{
+  const Postreview = async()=>{
 
-  //   const response = await axios.post('api/v1/reviews',{
-  //     user:user._id,
-  //     description:description,
-  //     rating:rating
+    const response = await axios.post('api/v1/reviews',{
+      user:user._id,
+      description:description,
+      rating:rating
 
-  //   })
+    })
 
-  //   alert(response?.data?.message)
+    alert(response?.data?.message)
 
-  // }
+  }
   return (
     <div>
       <Navbar />
@@ -74,7 +74,7 @@ const Home = () => {
 
 
       <div>
-        <h1 className='text-center'>Customer review</h1>
+        <h1 className='text-center'>What People Say About Us </h1>
 
   <div className='d-flex justify-content-evenly flex-wrap'>
   {
@@ -82,7 +82,7 @@ const Home = () => {
 
           return(
             <div  className='container-review' >
-               <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png"  height="70px"alt="user"/>  <span className='fs-4'>{review.user.name}</span>
+               <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png"  height="60px"alt="user"/>  <span className='fs-4'>{review?.user?.name}</span>
                <p>{review.description}</p>
                <h3>{review.rating}</h3>
             </div>
@@ -93,7 +93,24 @@ const Home = () => {
   </div>
      
      
-         
+  <div className='review-container'>
+        <form>
+       <input  placeholder='Enter your review here....'  className='input-box' type="text" value={description} onChange={(e)=>{
+            setDescription(e.target.value)
+          }} />
+          <input   placeholder=' Enter rating here ....'  className='input-box'  type="text" value={rating} onChange={(e)=>{
+            setRating(e.target.value)
+          }}/>
+          <button className='btn btn-primary ms-3' type="button" 
+
+
+onClick={()=>{
+  Postreview()
+}}
+          
+          >Add Review</button>
+        </form>
+        </div>
       </div>
     <Footer/>
     </div>

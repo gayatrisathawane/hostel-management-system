@@ -44,7 +44,9 @@ const Navbar = () => {
 
 
       { user?.name ? <span className="  me-5 ms-5  p-2 fs-5 ">
-          <Link className="nav-link  active "  to="/login">📤</Link>
+        <span onClick={()=>{
+          localStorage.removeItem('user')
+        }}> <Link className="nav-link  active "  to="/login">📤</Link></span> 
         </span>:null}
        
      

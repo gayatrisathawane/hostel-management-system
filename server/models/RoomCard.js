@@ -3,6 +3,7 @@ import { Schema, model } from "mongoose";
 const RoomCardSchema = new Schema({
     title :{
         type: String,
+        required:true
     },
     description :{
         type: String,
