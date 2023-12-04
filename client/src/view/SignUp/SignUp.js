@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
-
 import axios from 'axios';
 import "./SignUp.css"
-import { Link } from "react-router-dom";
 import Navbar from "../../component/Navbar/Navbar";
 
 
 function Signup() {
 
   const [name, setNmae] = useState("");
-  const [mobile ,setMobile] = useState('');
+  const [mobile, setMobile] = useState('');
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
   const [gender, setGender] = useState("female");
@@ -37,7 +35,7 @@ function Signup() {
 
     const response = await axios.post("/api/signup", {
       name: name,
-      mobile:mobile,
+      mobile: mobile,
       email: email,
       password: password,
       gender: gender
@@ -64,12 +62,14 @@ function Signup() {
   }, [])
 
   return (<>
-  
-  <Navbar/>
-    <div className="main-heading">
 
-      <from className="signup-from">
+    <Navbar />
+    <div className="signup-from-container">
+
+      <div className="signup-from">
+
         <h1 className="text-center">Sign-Up</h1>
+
         <div>
           <label htmlFor="name" className="text-color">Name</label>
           <input type="text"
@@ -105,9 +105,7 @@ function Signup() {
               setEmail(e.target.value);
             }} />
         </div>
-        <div>
-
-        </div>
+        
 
         <div>
           <label htmlFor="password" className="text-color">Password</label>
@@ -147,18 +145,17 @@ function Signup() {
           </div>
 
           <button type="button"
-            className="btn singup-btn"
+            className="singup-btn"
             onClick={signupUser}>
-
             Singup
           </button>
 
         </div>
-      </from>
+      </div>
     </div>
- 
+
   </>
-   )
+  )
 
 }
 
