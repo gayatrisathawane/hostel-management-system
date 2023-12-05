@@ -1,9 +1,10 @@
 import { Schema, model} from "mongoose";
 
 const userSchema = new Schema({
+    
     name: {
         type: String,
-        default: '_'
+        required:true
     },
     mobile: {
         type: String,
@@ -25,6 +26,6 @@ const userSchema = new Schema({
     }
 })
 
-const User = model('user', userSchema)
+const User = model('User', userSchema)
 
 export default User

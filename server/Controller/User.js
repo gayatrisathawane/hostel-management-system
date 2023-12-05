@@ -1,5 +1,4 @@
-
-import User from './../models/user.js';
+import User from './../models/User.js'
 
 //post Signup
 const postApiSignup =  async (req, res) => {
@@ -34,8 +33,8 @@ const postApiSignup =  async (req, res) => {
 
 const postApiLogin = async (req, res) => {
     const { email, password } = req.body;
-
     const user = await User.findOne({ email: email,  password: password}).select('name mobile email');
+   
     if (user) {
         return res.json({
             success: true,
@@ -45,6 +44,7 @@ const postApiLogin = async (req, res) => {
     }
     else{
         return res.json({
+            success:false,
             success: "Invalid email and password"
         })
     }

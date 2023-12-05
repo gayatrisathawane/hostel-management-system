@@ -1,4 +1,4 @@
-import Review from './../models/Review.js'
+import Review from '../models/Review.js'
 
 
 const postapireview= async(req,res)=>{
@@ -23,7 +23,7 @@ const postapireview= async(req,res)=>{
 
 const getapireview = async(req,res)=>{
 
-     const getallreview = await Review.find().populate('user');
+     const getallreview = await Review.find().populate('user')
 
      res.status(201).json({
         success:true,
