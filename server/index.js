@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import express  from "express";
-import RoomCard from "./models/RoomCard.js";
+import RoomCard from "./models/Room.js";
 import dotenv from 'dotenv'
 // import User from "./models/user.js";
 import {postApiLogin, postApiSignup} from './controlers/transaction.js'

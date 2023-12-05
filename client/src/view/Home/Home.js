@@ -34,7 +34,7 @@ const Home = () => {
   const Postreview = async()=>{
 
     const response = await axios.post('api/v1/reviews',{
-      user:user._id,
+      user:user?._id,
       description:description,
       rating:rating
 
@@ -83,7 +83,7 @@ const Home = () => {
           return(
             <div  className='container-review' >
                <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png"  height="60px"alt="user"/>  <span className='fs-4'>{review?.user?.name}</span>
-               <p>{review.description}</p>
+               <p className='mt-3'>{review.description}</p>
                <h3>{review.rating}</h3>
             </div>
            
@@ -93,7 +93,7 @@ const Home = () => {
   </div>
      
      
-  <div className='review-container'>
+  <div className='review-container container'>
         <form>
        <input  placeholder='Enter your review here....'  className='input-box' type="text" value={description} onChange={(e)=>{
             setDescription(e.target.value)

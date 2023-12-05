@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
 
-const RoomCardSchema = new Schema({
+const roomSchema = new Schema({
     title :{
         type: String,
         required:true
@@ -33,5 +33,5 @@ const RoomCardSchema = new Schema({
     timestamps: true,
 });
 
-const RoomCard = model('RoomCard', RoomCardSchema);
-export default  RoomCard;
+const Room = model('Room', roomSchema);
+export default  Room;
