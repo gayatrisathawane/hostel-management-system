@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 import express  from "express";
-import RoomCard from "./models/Room.js";
+import Room from "./models/Room.js";
 import dotenv from 'dotenv'
 // import User from "./models/user.js";
-import {postApiLogin, postApiSignup} from './controlers/transaction.js'
-import{postapireview,getapireview} from './controlers/Review.controller.js'
+import {postApiLogin, postApiSignup} from './Controller/User.js'
+import{postapireview,getapireview} from './Controller/Review.controller.js'
 
 dotenv.config()
 
@@ -57,7 +57,7 @@ const { title, description,candidate, price, type, stars, image } = req.body
       stars: stars,
       image: image
     })
-    const saveRoomCard = await RoomCard.save();
+    const saveRoomCard = await Room.save();
     res.json({
       success: true,
       data: saveRoomCard,
