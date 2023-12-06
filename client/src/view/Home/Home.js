@@ -15,7 +15,7 @@ const Home = () => {
   const[rating,setRating]=useState('')
 
 
-  const loadAllReview = async() =>{
+const loadAllReview = async() =>{
 
     const response = await axios.get('api/v1/reviews')
 
@@ -46,6 +46,9 @@ const Home = () => {
   return (
     <div>
       <Navbar />
+
+     
+
       <div className='container home-container mt-5 py-5'>
         <div className=' row'>
 
@@ -73,7 +76,7 @@ const Home = () => {
       </div><br/>
 
 
-      <div>
+<div>
         <h1 className='text-center'>What People Say About Us </h1>
 
   <div className='d-flex justify-content-evenly flex-wrap'>
@@ -107,8 +110,7 @@ const Home = () => {
 onClick={()=>{
   Postreview()
 }}
-          
-          >Add Review</button>
+  >Add Review</button>
         </form>
         </div>
       </div>

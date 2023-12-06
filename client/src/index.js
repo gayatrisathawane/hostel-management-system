@@ -5,15 +5,13 @@ import Home from './view/Home/Home.js'
 import SignUp from './view/SignUp/SignUp'
 import Login from './view/Login/Login'
 import Contact from './view/Contact/Contact'
+import Book from './view/Bookroom/Bookroom.js'
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Room from './view/Room/Room';
 
 
@@ -37,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact/>,
+  },
+  {
+    path: "/book/:id",
+    element: <Book/>,
   },
 ]);
 

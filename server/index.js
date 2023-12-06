@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 import express  from "express";
-import Room from "./models/Room.js";
 import dotenv from 'dotenv'
 // import User from "./models/user.js";
 import {postApiLogin, postApiSignup} from './Controller/User.js'
 import{postapireview,getapireview} from './Controller/Review.controller.js'
+import {postApiRoom,getApiRoom} from './Controller/room.js'
 
 dotenv.config()
 
@@ -44,28 +44,15 @@ app.post('/api/v1/reviews',postapireview)
 app.get('/api/v1/reviews',getapireview)
 
 // room card Api-------------
-// post room----------------
-app.post('/postroom', async (req, res) => {   
-const { title, description,candidate, price, type, stars, image } = req.body
-  
-    const RoomCard = new RoomCard({
-      title: title,
-      description: description,
-      price: price,
-      type: type,
-      candidate:candidate,
-      stars: stars,
-      image: image
-    })
-    const saveRoomCard = await Room.save();
-    res.json({
-      success: true,
-      data: saveRoomCard,
-      message: "Room added successfully"
-    })
-})
+// post /room
+app.post('/api/room',postApiRoom)
+
+//get /room
+app.get('/api/rooms',getApiRoom)
+
+
 // search room---------------
-app.get('/searchroom', async (req, res) => {
+app.get('/api/searchroom', async (req, res) => {
     const { q } = req.query
     const searchroom = await RoomCard.findOne({ name: { $regex: q, $options: 'i' } })
     res.json({
