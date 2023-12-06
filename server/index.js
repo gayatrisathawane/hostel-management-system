@@ -52,7 +52,7 @@ app.get('/api/rooms',getApiRoom)
 
 
 // search room---------------
-app.get('/searchroom', async (req, res) => {
+app.get('/api/searchroom', async (req, res) => {
     const { q } = req.query
     const searchroom = await RoomCard.findOne({ name: { $regex: q, $options: 'i' } })
     res.json({

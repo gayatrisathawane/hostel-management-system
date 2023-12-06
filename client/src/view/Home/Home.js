@@ -4,7 +4,7 @@ import './Home.css'
 import Footer from '../../component/Footer/Footer'
 import axios from 'axios'
 import user from './user.png'
-
+import Roomcards from './../../component/Roomcard/Roomcard'
 
 const Home = () => {
   const user = JSON.parse(localStorage.getItem('user') ||'{}')
@@ -13,6 +13,40 @@ const Home = () => {
 
   const [description,setDescription]=useState('')
   const[rating,setRating]=useState('')
+
+  const[rooms, setRooms] = useState([]);
+const [search, setSearch] = useState([]);
+
+
+const searchRooms = async () =>{
+  if(search === ''){
+    loadRooms();
+    return;
+  }
+  const response = await axios.get(`/products/search?q=${search}`)
+  setRooms(response?.data?.data);
+  }
+  
+  useEffect(() =>{
+  
+  },[search])
+  
+  const loadRooms = async ()=>{
+    try{
+  const response= await axios.get('/api/rooms');
+  setRooms(response?.data?.data);
+    }
+    catch(e){
+     console.log(e)
+      alert('Error loading rooms');
+    }
+  };
+  
+  useEffect(()=>{
+    loadRooms();
+  },[])
+
+
 
 
   const loadAllReview = async() =>{
@@ -46,6 +80,18 @@ const Home = () => {
   return (
     <div>
       <Navbar />
+
+      <div>
+  
+  <input type='text'
+   placeholder='Search'
+    className='search-bar' 
+    onChange={(e) => {
+      setSearch(e.target.value)
+    }}
+    />
+  </div>
+
       <div className='container home-container mt-5 py-5'>
         <div className=' row'>
 
@@ -71,6 +117,31 @@ const Home = () => {
 
         </div>
       </div><br/>
+
+
+<div>
+<div className='rooms-container'>
+{
+  rooms?.map((room,index)=>{
+    const {_id, title, description, price,type,candidate, image}=room
+    return(
+      <Roomcards key={index}
+      title={title}
+      description={description}
+      price={price}
+      image={image}
+    type={type}
+    candidate={candidate}
+    id={_id}
+      />
+    )
+  })
+} 
+</div>
+     
+  
+  
+</div>
 
 
       <div>
@@ -107,8 +178,7 @@ const Home = () => {
 onClick={()=>{
   Postreview()
 }}
-          
-          >Add Review</button>
+  >Add Review</button>
         </form>
         </div>
       </div>
