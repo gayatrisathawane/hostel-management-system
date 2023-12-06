@@ -1,5 +1,5 @@
 .room-card{
-    width: 300px;
+width: 80%;
     margin: 10px 20px;
     padding:15px 30px;
     border: Jpx solid white;
@@ -7,12 +7,16 @@
     border-radius: 10px;
    border: 1px solid rgb(212, 207, 207);
 }
+.roomcard-container{
+    display: flex;
+    justify-content: space-between;
+}
 .room-card:hover{
     background-color: rgb(246, 246, 246);
     box-shadow: 0px 0px 5px rgb(26, 185, 233);
 }
 .room-card-image{
-    width: 100%;
+  width: 300px;
     height: 250px;
     object-fit: contain;
     background-color: white;
