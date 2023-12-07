@@ -65,7 +65,9 @@ function Signup() {
     <Navbar />
     <div className="signup-container-main">
     <div className="main-container">
-      <div className="container-A">
+      <div>
+
+        <img src="https://img.freepik.com/free-photo/three-serious-students-studying-using-tablet-computer_1262-15312.jpg?size=626&ext=jpg&ga=GA1.1.227241808.1695190605&semt=ais" width="500px" height="500px" className="p-5"/>
 
       </div>
 
@@ -74,13 +76,10 @@ function Signup() {
 
         <div className="signup-from">
 
-<<<<<<< HEAD
 
-          <h4 className="heading">Welcome students!</h4>
-          <h1 className="text-center">Sign-Up</h1>
-=======
+          <p className="heading fs-2" >Welcome students!</p>
+
           <h1 className="text-center fs-1"> SignUp </h1>
->>>>>>> 950cf05c2b741ac51aa6be6c542ec6b880b1b5aa
 
           <div>
             <label htmlFor="name" className="input-heading">Name</label>

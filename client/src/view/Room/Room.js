@@ -8,7 +8,7 @@ import Roomcards from './../../component/Roomcard/Roomcard'
 function Room() {
 
   const[rooms, setRooms] = useState([]);
-const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState([]);
 
   const searchRooms = async () =>{
     if(search === ''){
@@ -22,6 +22,20 @@ const [search, setSearch] = useState([]);
     useEffect(() =>{
     
     },[search])
+
+
+   
+
+    useEffect(()=>{
+      const user = JSON.parse(localStorage.getItem('user') || '{}')
+
+      if(!user?.email){
+        alert('you are not logged')
+        window.location.href='/login'
+      }
+
+
+    },[])
     
     const loadRooms = async ()=>{
       try{

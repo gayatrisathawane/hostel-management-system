@@ -31,6 +31,11 @@ const loadAllReview = async() =>{
 
   },[])
 
+
+  
+
+ 
+
   const Postreview = async()=>{
 
     const response = await axios.post('api/v1/reviews',{
@@ -40,9 +45,21 @@ const loadAllReview = async() =>{
 
     })
 
+
+
     alert(response?.data?.message)
 
   }
+
+
+
+  useEffect(()=>{
+    const user = JSON.parse(localStorage.getItem('user') || '{}')
+
+
+
+
+  },[])
   return (
     <div>
       <Navbar />
@@ -106,7 +123,7 @@ const loadAllReview = async() =>{
           }}/>
           <button className='btn btn-primary ms-3' type="button" 
 
-
+        
 onClick={()=>{
   Postreview()
 }}
