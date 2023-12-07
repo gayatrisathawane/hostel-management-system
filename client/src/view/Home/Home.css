@@ -31,9 +31,9 @@
 }
 
 .input-box{
-    width:550px;
+    width:400px;
     box-shadow: 0 0 8px rgb(169, 166, 166);
-   margin-left: 10px;
+    margin-left: 10px;
     outline: none;
     border: none;
     border-radius: 5px;

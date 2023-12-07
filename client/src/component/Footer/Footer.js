@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer-bg text-white text-center text-lg-start">
    
-    <div className="container p-4">
+    <div className=" p-4">
      
       <div className="row">
        
@@ -23,19 +23,19 @@ const Footer = () => {
           <ul className="list-unstyled mb-0">
             <li>
               <a href="#!" className="text-white text-decoration-none fs-5">Home</a>
-            </li><br/>
+            </li>
             <li>
               <a href="#!" className="text-white text-decoration-none fs-5">Room</a>
-            </li><br/>
+            </li>
             <li>
               <a href="#!" className="text-white text-decoration-none fs-5">About us</a>
-            </li><br/>
+            </li>
             <li>
               <a href="#!" className="text-white text-decoration-none fs-5">Signup</a>
-            </li><br/>
+            </li>
             <li>
               <a href="#!" className="text-white text-decoration-none fs-5">Login</a>
-            </li><br/>
+            </li>
           </ul>
         </div>
        
@@ -45,16 +45,16 @@ const Footer = () => {
           <ul className="list-unstyled">
             <li>
               <a href="#!" className="text-white text-decoration-none fs-5">Gmail 📧</a>
-            </li><br/>
+            </li>
             <li>
               <a href='tel:0000000' className="text-white text-decoration-none fs-5">call 📞</a>
-            </li><br/>
+            </li>
             <li>
               <a href="#!" className="text-white text-decoration-none fs-5">Facebook</a>
-            </li><br/>
+            </li>
             <li>
               <a href="#!" className="text-white text-decoration-none fs-5">  Instagram</a>
-            </li><br/>
+            </li>
           </ul>
         </div>
       
