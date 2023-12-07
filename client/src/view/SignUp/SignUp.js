@@ -62,8 +62,8 @@ function Signup() {
   }, [])
 
   return (<>
-
     <Navbar />
+    <div className="signup-container-main">
     <div className="main-container">
       <div className="container-A">
 
@@ -74,9 +74,13 @@ function Signup() {
 
         <div className="signup-from">
 
+<<<<<<< HEAD
 
           <h4 className="heading">Welcome students!</h4>
           <h1 className="text-center">Sign-Up</h1>
+=======
+          <h1 className="text-center fs-1"> SignUp </h1>
+>>>>>>> 950cf05c2b741ac51aa6be6c542ec6b880b1b5aa
 
           <div>
             <label htmlFor="name" className="input-heading">Name</label>
@@ -155,7 +159,7 @@ function Signup() {
             <button type="button"
               className=" singup-btn"
               onClick={signupUser}>
-              Singup
+              SignUp
             </button>
 
           </div>
@@ -164,6 +168,8 @@ function Signup() {
   
 
     </div>
+    </div>
+   
 
    
 

@@ -49,7 +49,7 @@ const loadAllReview = async() =>{
 
      
 
-      <div className='container home-container mt-5 py-5'>
+      <div className='p-1 home-container mt-5 py-5'>
         <div className=' row'>
 
           <div className='col-md-6'>
@@ -96,7 +96,7 @@ const loadAllReview = async() =>{
   </div>
      
      
-  <div className='review-container container'>
+  <div className='review-container m-2'>
         <form>
        <input  placeholder='Enter your review here....'  className='input-box' type="text" value={description} onChange={(e)=>{
             setDescription(e.target.value)
