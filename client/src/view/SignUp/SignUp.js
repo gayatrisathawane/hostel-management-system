@@ -74,7 +74,13 @@ function Signup() {
 
         <div className="signup-from">
 
+<<<<<<< HEAD
+
+          <h4 className="heading">Welcome students!</h4>
+          <h1 className="text-center">Sign-Up</h1>
+=======
           <h1 className="text-center fs-1"> SignUp </h1>
+>>>>>>> 950cf05c2b741ac51aa6be6c542ec6b880b1b5aa
 
           <div>
             <label htmlFor="name" className="input-heading">Name</label>
@@ -103,7 +109,7 @@ function Signup() {
           <div>
             <label htmlFor="email" className="input-heading">Email</label>
             <input type="email" 
-              placeholder="Enter your email"
+              placeholder="you@example.com"
               id="email"
               className="from-control"
               value={email}
@@ -116,7 +122,7 @@ function Signup() {
           <div>
             <label htmlFor="password" className="input-heading">Password</label>
             <input type="password"
-              placeholder="Enter your password"
+              placeholder="Enter 8 characters or mor"
               id="password"
               className="from-control"
               value={password}
@@ -151,7 +157,7 @@ function Signup() {
             </div>
 
             <button type="button"
-              className="singup-btn"
+              className=" singup-btn"
               onClick={signupUser}>
               SignUp
             </button>

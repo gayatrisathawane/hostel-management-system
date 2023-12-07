@@ -73,12 +73,24 @@ body {
   font-weight: 400;
 }
 
+.heading{
+  font-size: 12px;
+  font-weight: 200;
+}
 
+<<<<<<< HEAD
+
+.singup-btn{
+  width: 200px;
+  margin: 5px;
+  margin-left: 50px;
+=======
 .singup-btn {
   width: 250px;
   margin: 5px;
+>>>>>>> 950cf05c2b741ac51aa6be6c542ec6b880b1b5aa
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   text-align: center;
   padding: 5px 10px;
   color: white;

@@ -35,7 +35,7 @@ const postApiLogin = async (req, res) => {
     const { email, password } = req.body;
     const user = await User.findOne({ email: email,  password: password}).select('name mobile email');
    
-    if (user) {
+    if(user) {
         return res.json({
             success: true,
             data: user,
@@ -45,7 +45,7 @@ const postApiLogin = async (req, res) => {
     else{
         return res.json({
             success:false,
-            success: "Invalid email and password"
+            message: "Invalid email and password"
         })
     }
 }

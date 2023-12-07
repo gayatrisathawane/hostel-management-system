@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 import express  from "express";
 import dotenv from 'dotenv'
-// import User from "./models/user.js";
 import {postApiLogin, postApiSignup} from './Controller/User.js'
 import{postapireview,getapireview} from './Controller/Review.controller.js'
 import {postApiRoom,getApiRoom} from './Controller/room.js'
@@ -13,6 +12,18 @@ const app = express()
 app.use(express.json())
 
 const PORT = process.env.PORT || 5000
+
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET, OPTIONS, POST, PUT, DELETE");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, Content-type, Accept, Authorization"
+    );
+    res.header("Access-Control-Allow-Credentials", "true");
+  
+    next();
+  });
 
 
 //connection of mongodb 
