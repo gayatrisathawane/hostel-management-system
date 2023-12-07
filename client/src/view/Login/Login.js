@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./Login.css"
 import Navbar from "../../component/Navbar/Navbar";
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +15,7 @@ function Login() {
 
       alert(response?.data?.message);
 
-      if (response?.data?.success) {
+      if(response?.data?.success) {
           localStorage.setItem("user", JSON.stringify(response?.data?.data));
           window.location.href = "/"
       }
@@ -32,12 +33,18 @@ function Login() {
 
       <div>
           <Navbar />
-          <from className="login-from">
+
+          <div className="main-containerB">
+            <div className="background-imageA">
+            </div>
+
+            <div>
+            <from className="login-from">
               <h1 className="text-center">Login</h1>
 
               <div>
                   <div>
-                      <label htmlFor="email" className="text-color">Email</label>
+                      <label htmlFor="email" className="input-heading-login">Email</label>
                       <input type="email"
                           placeholder="Enter your email"
                           id="email"
@@ -49,7 +56,7 @@ function Login() {
                   </div>
 
                   <div>
-                      <label htmlFor="password" className="text-color">Password</label>
+                      <label htmlFor="password" className="input-heading-login">Password</label>
                       <input type="password"
                           placeholder="Enter your password"
                           id="password"
@@ -61,12 +68,19 @@ function Login() {
                   </div>
               </div>
 
-              <button type="button" className="btn login-btn"
+              <button type="button" className="login-btn"
                   onClick={Login} >
                   Login
               </button>
 
           </from>
+            </div>
+          </div>
+
+ 
+
+            
+         
       </div>
 
   );

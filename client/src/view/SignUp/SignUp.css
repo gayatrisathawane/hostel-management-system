@@ -98,13 +98,18 @@ body {
   font-weight: 400;
 }
 
+.heading{
+  font-size: 12px;
+  font-weight: 200;
+}
 
-.singup-btn {
+
+.singup-btn{
   width: 200px;
   margin: 5px;
-
+  margin-left: 50px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   text-align: center;
   padding: 3px;
   color: white;
