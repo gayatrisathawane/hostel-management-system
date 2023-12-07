@@ -1,7 +1,7 @@
 import User from './../models/User.js'
 
 //post Signup
-const postApiSignup =  async (req, res) => {
+const postApiSignup =  async(req, res) => {
     const { name, mobile, email, password, gender } = req.body;
 
     const user = new User({
@@ -9,7 +9,7 @@ const postApiSignup =  async (req, res) => {
         email,
         mobile,
         password,
-        gender,
+        gender
     })
    
     try{
@@ -17,13 +17,13 @@ const postApiSignup =  async (req, res) => {
         return res.json({
             success: true,
             data: saved,
-            message: 'Signup successfully'
+            message:'Signup successfully'
         });
     }
     catch(err){
         return res.json({
             success:false,
-            message:err.message
+            message:(err.message)
         })
     }
 
@@ -39,13 +39,13 @@ const postApiLogin = async (req, res) => {
         return res.json({
             success: true,
             data: user,
-            message: "successfully login"
+            message:"successfully login"
         })
     }
     else{
         return res.json({
             success:false,
-            message: "Invalid email and password"
+            message:"Invalid email and password"
         })
     }
 }
