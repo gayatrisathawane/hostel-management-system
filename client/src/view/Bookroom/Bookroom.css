@@ -5,9 +5,10 @@
 }
 
 .bookRoom-container{
-    box-shadow: 0 0 10px rgb(200, 233, 239);
+    box-shadow: 0 0 5px rgb(207, 202, 245);
     margin: 40px;
     padding: 10px;
+    border-radius: 10px;
    
 }
 

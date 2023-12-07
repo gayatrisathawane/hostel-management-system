@@ -61,7 +61,7 @@ const bookRoom = async () =>{
        
 
         <div>
-        <img src={room?.image} alt={room?.type} width="400px" height="350px"/>
+        <img src={room?.image} alt={room?.type}   width="430px" height="450px"/>
         </div>
 
         <div className='ms-5'>
