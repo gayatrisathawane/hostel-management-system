@@ -8,15 +8,13 @@ function Roomcard({ id, title, description, price, type, candidate, image }) {
   return (
     <div className='room-card'>
       <div className='roomcard-container'>
-        <div className='p-2'>
+        <div className='d-block mx-auto'>
           <img src={image} className='room-card-image' />
         </div>
 
-        <div className='ms-5 p-2'>
-          <h1 className='room-card-name'>{title}</h1>
-          <p>🛌 {description}</p>
-          <p>🏠  {type}</p>
-          <p>👤 {candidate}</p>
+        <div className=' p-2'>
+          <p className='room-card-name fs-5'>{title}</p>
+            <p className='fs-4'> {type}</p>
           <p className='room-card-price'>₹ {price}</p>
 
          <Link to={`/book/${id}`} className='room-card-btn '>View Details</Link>

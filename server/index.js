@@ -3,7 +3,8 @@ import express  from "express";
 import dotenv from 'dotenv'
 import {postApiLogin, postApiSignup} from './Controller/User.js'
 import{postapireview,getapireview} from './Controller/Review.controller.js'
-import {postApiRoom,getApiRoom} from './Controller/room.js'
+import {postApiRoom,getApiRoom,getRoomApi} from './Controller/room.js'
+import {postapiroombook} from './Controller/RoomBook.controller.js'
 
 import path from 'path';
 
@@ -65,6 +66,10 @@ app.post('/api/room',postApiRoom)
 //get /room
 app.get('/api/rooms',getApiRoom)
 
+app.get('/api/v1/rooms/:id',getRoomApi)
+
+app.post('/api/v1/bookrooms',postapiroombook)
+
 
 // search room---------------
 app.get('/api/searchroom', async (req, res) => {
@@ -87,7 +92,7 @@ app.get('/api/searchroom', async (req, res) => {
     });
   }
 
-  
+
 app.listen(PORT ,()=>{
     console.log(`server is running ${PORT} `);
     

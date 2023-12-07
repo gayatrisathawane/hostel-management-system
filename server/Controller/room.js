@@ -39,5 +39,32 @@ const postApiRoom = async (req, res) => {
             data: allRoom
         })
     }
+    const getRoomApi = async(req,res)=> {
 
-    export {postApiRoom,getApiRoom}
+      const {id}=req.params;
+
+
+      try{
+        const getroombyId = await Room.findOne({ _id :id})
+
+    return  res.json({
+      success:true,
+      message:"room fetched",
+      data:getroombyId
+    })
+
+      }catch(err){
+        return  res.json({
+          success:false,
+          message:err.message
+          
+        })
+      }
+
+      
+
+
+
+    }
+
+    export {postApiRoom,getApiRoom,getRoomApi}

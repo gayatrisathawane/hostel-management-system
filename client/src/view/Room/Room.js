@@ -61,7 +61,7 @@ function Room() {
   
   <input type='text'
    placeholder='Search'
-    className='search-bar' 
+    className='search-bar1' 
     onChange={(e) => {
       setSearch(e.target.value)
     }}
@@ -78,9 +78,9 @@ function Room() {
       description={description}
       price={price}
       image={image}
-    type={type}
-    candidate={candidate}
-    id={_id}
+       type={type}
+      candidate={candidate}
+       id={_id}
       />
     )
   })
