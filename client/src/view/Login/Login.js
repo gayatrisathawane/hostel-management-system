@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./Login.css"
+import Footer from '../../component/Footer/Footer'
 import Navbar from "../../component/Navbar/Navbar";
 
 function Login() {
@@ -40,27 +41,27 @@ function Login() {
 
             <div>
             <from className="login-from">
-              <h1 className="text-center">Login</h1>
+              <p className=" fs-1">Login</p>
 
               <div>
-                  <div>
-                      <label htmlFor="email" className="input-heading-login">Email</label>
+                  <div className="mt-1">
+                      <label htmlFor="email" className="input-heading-login fs-5 mt-1">Email</label>
                       <input type="email"
                           placeholder="Enter your email"
                           id="email"
-                          className="from-control"
+                          className="from-control p-2"
                           value={email}
                           onChange={(e) => {
                               setEmail(e.target.value);
                           }} />
                   </div>
 
-                  <div>
-                      <label htmlFor="password" className="input-heading-login">Password</label>
+                  <div className="mt-1">
+                      <label htmlFor="password" className="input-heading-login fs-5 mt-1">Password</label>
                       <input type="password"
-                          placeholder="Enter your password"
+                          placeholder="Enter your password "
                           id="password"
-                          className="from-control"
+                          className="from-control p-2"
                           value={password}
                           onChange={(e) => {
                               setPassword(e.target.value);
@@ -75,10 +76,11 @@ function Login() {
 
           </from>
             </div>
+           
+
           </div>
 
- 
-
+          <Footer/>
             
          
       </div>

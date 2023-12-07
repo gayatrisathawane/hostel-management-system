@@ -5,9 +5,13 @@ import {postApiLogin, postApiSignup} from './Controller/User.js'
 import{postapireview,getapireview} from './Controller/Review.controller.js'
 import {postApiRoom,getApiRoom} from './Controller/room.js'
 
+import path from 'path';
+
 dotenv.config()
 
 const app = express()
+
+const __dirname = path.resolve();
 
 app.use(express.json())
 
@@ -72,6 +76,18 @@ app.get('/api/searchroom', async (req, res) => {
       message: "Room searched successfully"
     })
   })
+
+
+
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+  
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
+    });
+  }
+
+  
 app.listen(PORT ,()=>{
     console.log(`server is running ${PORT} `);
     

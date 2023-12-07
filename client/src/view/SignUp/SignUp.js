@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./SignUp.css"
 import Navbar from "../../component/Navbar/Navbar";
+import Footer from "../../component/Footer/Footer";
 
 
 function Signup() {
@@ -61,7 +62,8 @@ function Signup() {
 
   }, [])
 
-  return (<>
+  return (
+    <div>
     <Navbar />
     <div className="signup-container-main">
     <div className="main-container">
@@ -164,18 +166,17 @@ function Signup() {
           </div>
         </div>
       </div>
+    </div>
   
-
-    </div>
-    </div>
+   </div>
    
-
-   
+   <Footer/>
+   </div>
 
  
   
 
-  </>
+  
   )
 
 }
