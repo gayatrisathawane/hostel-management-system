@@ -39,7 +39,7 @@ const Navbar = () => {
         </button>
 
 
-        <p><span className='fs-4'>Hello,{user?.name}</span></p>
+        <p><span className='fs-4'>Hello,{user?.name || 'User !'}</span></p>
 
 
 
