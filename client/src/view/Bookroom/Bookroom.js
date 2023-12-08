@@ -7,7 +7,7 @@ import { useParams } from 'react-router-dom';
 function Bookroom() {
 
   const [room, setRoom] = useState({});
-  const[canditate,setcandidate]=useState('')
+  const[candidate,setcandidate]=useState('')
   // const [search, setSearch] = useState([]);
 
   // const searchBooks = async () =>{
@@ -45,11 +45,13 @@ const bookRoom = async () =>{
 
     user:user._id,
     room:room._id,
-    canditate:canditate
+    candidate:candidate
 
   })
 
   alert(response?.data?.message)
+
+  window.location.href='/room'
 }
 
   return (
@@ -70,7 +72,8 @@ const bookRoom = async () =>{
       <p className='fs-4'> Type:{room.type}</p>
       <p className='fs-4'> Description: {room.description}</p>
       <p className='fs-4 text-danger'>Price: {room?.price}</p>
-      <p className='fs-5'> Candidate: <input type="Number" value={canditate} onChange={(e)=>{
+      <p>Total charge: {room?.price} </p>
+      <p className='fs-5'> Candidate: <input type="Number" value={candidate} onChange={(e)=>{
         setcandidate(e.target.value)
       }}/></p>
 

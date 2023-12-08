@@ -8,9 +8,9 @@ import logoD from "./pin.png"
 import Footer from "../../component/Footer/Footer"
 const Contact = () => {
   return (
-    <div>
+    <div className='contact-main-container'>
       <Navbar />
-      <div className='heading'>
+      <div className='headingA'>
         <p className='head-1'>Contact/Room</p>
         <p className='head-2'>Contact Us</p>
       </div>
@@ -62,6 +62,7 @@ const Contact = () => {
             <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119064.90027594799!2d78.99010793294913!3d21.161225997003946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1701955047059!5m2!1sen!2sin"></iframe>
           </div>
         </div>
+        <br/>
        <Footer/>
       </div>
       )
