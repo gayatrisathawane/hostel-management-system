@@ -23,6 +23,10 @@ const userSchema = new Schema({
     gender: {
         type: String,
         default: 'prefect not to say'
+    },
+    image:{
+        type:String,
+        
     }
 })
 

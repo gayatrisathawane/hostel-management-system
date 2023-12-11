@@ -12,6 +12,7 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
   const [gender, setGender] = useState("female");
+  const[image,setimage]=useState('')
 
   const signupUser = async () => {
     if (!name) {
@@ -39,7 +40,8 @@ function Signup() {
       mobile: mobile,
       email: email,
       password: password,
-      gender: gender
+      gender: gender,
+      image:image
     })
 
     alert(response?.data?.message);
@@ -69,17 +71,12 @@ function Signup() {
     <div className="main-container">
       <div>
 
-        <img src="https://img.freepik.com/free-photo/three-serious-students-studying-using-tablet-computer_1262-15312.jpg?size=626&ext=jpg&ga=GA1.1.227241808.1695190605&semt=ais" width="500px" height="500px" className="p-5"/>
-
+        <img src="https://img.freepik.com/free-photo/three-serious-students-studying-using-tablet-computer_1262-15312.jpg?size=626&ext=jpg&ga=GA1.1.227241808.1695190605&semt=ais" alt="sign-up" width="550px" height="550px" className="p-5"/>
       </div>
-
       <div className="signup-from-container">
-
-
         <div className="signup-from">
 
-
-          <p className="heading fs-2" >Welcome students!</p>
+          <p className="heading fs-2 text-center" >Welcome students!</p>
 
           <h1 className="text-center fs-1"> SignUp </h1>
 
@@ -132,8 +129,21 @@ function Signup() {
               }} />
 
 
+            <div>
+
 
             <div>
+            <label htmlFor="image" className="input-heading">ImageUrl</label>
+            <input type="text" 
+              placeholder="you@example.com"
+              id="image"
+              className="from-control"
+              value={image}
+              onChange={(e) => {
+                setimage(e.target.value);
+              }} />
+          </div>
+          
 
               <input type="radio"
                 id="male"
@@ -157,11 +167,17 @@ function Signup() {
               <label htmlFor='female' className="input-heading">female</label>
             </div>
 
+            <div>
+              
+              </div>
+
             <button type="button"
               className=" singup-btn"
               onClick={signupUser}>
               SignUp
             </button>
+
+           
 
           </div>
         </div>

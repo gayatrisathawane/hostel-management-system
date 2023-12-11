@@ -3,12 +3,13 @@ import Navbar from '../../component/Navbar/Navbar'
 import './Home.css'
 import Footer from '../../component/Footer/Footer'
 import axios from 'axios'
-import user from './user.png'
+import { response } from 'express'
+
 
 
 const Home = () => {
-  const user = JSON.parse(localStorage.getItem('user') ||'{}')
-
+ 
+ const [user,setUser]=useState('')
   const[reviews ,setReview]=useState([])
 
   const [description,setDescription]=useState('')
@@ -31,11 +32,6 @@ const loadAllReview = async() =>{
 
   },[])
 
-
-  
-
- 
-
   const Postreview = async()=>{
 
     const response = await axios.post('api/v1/reviews',{
@@ -45,21 +41,30 @@ const loadAllReview = async() =>{
 
     })
 
-
-
     alert(response?.data?.message)
 
   }
-
-
-
   useEffect(()=>{
     const user = JSON.parse(localStorage.getItem('user') || '{}')
-
-
-
+    setUser(user)
 
   },[])
+
+
+  // const deleteReview = async(_id)=>{
+
+  //   const deleteUserReview = await axios.delete(`/api/v1/review/:${_id}`)
+
+  //   if(response.data.success){
+  //     loadAllReview()
+
+
+  //   }
+
+  // }
+
+
+  
   return (
     <div>
       <Navbar />
@@ -100,11 +105,32 @@ const loadAllReview = async() =>{
   {
         reviews?.map((review,i)=>{
 
+          const{createdAt,rating,description}=review
+          const user= review?.user?.name
+          const date = new Date(createdAt).toLocaleDateString()
+
           return(
-            <div  className='container-review' >
-               <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png"  height="60px"alt="user"/>  <span className='fs-4'>{review?.user?.name}</span>
-               <p className='mt-3'>{review.description}</p>
-               <h3>{review.rating}</h3>
+            <div  className='container-review p-2' >
+
+              <div className='d-flex ps-2 pt-2'>
+
+              <img src={review?.user?.image} height="40px" alt="user" className='mt-2 p-1 rounded-circle border border-danger'/>
+
+              <div className='ms-2'>
+              <span className='fs-4'>{user}</span><br/>
+                <p>{date}</p>
+              </div>
+
+              {/* <p onClick={()=>{
+                deleteReview(user?._id)
+              }}>❌</p> */}
+
+              </div>
+             
+             
+
+               <p className='fs-5'>{rating}</p>
+               <p className='mt-3'>{description}</p>
             </div>
            
           )

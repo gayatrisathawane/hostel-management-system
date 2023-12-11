@@ -16,7 +16,7 @@ const __dirname = path.resolve();
 
 app.use(express.json())
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 8000
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -69,6 +69,8 @@ app.get('/api/rooms',getApiRoom)
 app.get('/api/v1/rooms/:id',getRoomApi)
 
 app.post('/api/v1/bookrooms',postapiroombook)
+
+
 
 
 // search room---------------

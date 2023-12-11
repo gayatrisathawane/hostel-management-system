@@ -2,14 +2,15 @@ import User from './../models/User.js'
 
 //post Signup
 const postApiSignup =  async(req, res) => {
-    const { name, mobile, email, password, gender } = req.body;
+    const { name, mobile, email, password, gender,image } = req.body;
 
     const user = new User({
         name,
         email,
         mobile,
         password,
-        gender
+        gender,
+        image
     })
    
     try{
@@ -33,7 +34,8 @@ const postApiSignup =  async(req, res) => {
 
 const postApiLogin = async (req, res) => {
     const { email, password } = req.body;
-    const user = await User.findOne({ email: email,  password: password}).select('name mobile email');
+    
+    const user = await User.findOne({ email: email,  password: password});
    
     if(user) {
         return res.json({
