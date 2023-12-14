@@ -43,6 +43,7 @@ const loadAllReview = async() =>{
     alert(response?.data?.message)
 
   }
+  // {role=='admin' ? window.location.href='/admin/roompost' : 'you are not access this page'}
   return (
     <div>
       <Navbar />
