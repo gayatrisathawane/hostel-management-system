@@ -1,3 +1,84 @@
-*{
-    
+.contact-main-container{
+    margin: 15px;
+}
+
+
+
+.headingA{
+    height: 250px;
+    width:100%;
+    background-color: #e6f9ff;
+    padding-top: 35px;
+    margin-top: 50px;
+}
+.head-1{
+font-size: 26px;
+margin-left: 50px;
+}
+.head-2{
+font-size: 45px;
+font-weight:700;
+margin-left: 60px;
+}
+
+.contact-container{
+    background-color: #e6f9ff;
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.head-A{
+    font-size: 40px;
+    font-weight: 700;
+}
+.head-B{
+    font-size: 22px;
+}
+
+.contact-cont-A1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+}
+
+.logos{
+    width: 35px;
+    height: 35px;
+    margin-top: 15px;
+    margin-right: 8px;
+}
+.contact-logo{
+    display: flex;
+    flex-direction: row;
+}
+.logo-ifm{
+    margin: none;
+}
+.map{
+    height: 350px;
+    width: 330px;
+}
+.contact-logo1{
+    display: flex;
+    flex-direction: row;
+}
+.contact-logo2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 160px;
+}
+.contact-logo3{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.contact-logo4{
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-top: 20px;
 }

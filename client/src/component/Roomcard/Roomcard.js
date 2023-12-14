@@ -1,31 +1,29 @@
 import React from 'react'
 import './Roomcard.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
-function Roomcard({id, title, description, price,type,candidate, image}) {
-  
+function Roomcard({ id, title, description, price, type, candidate, image }) {
+
   return (
     <div className='room-card'>
       <div className='roomcard-container'>
-        <div>
-        <img src={image} className='room-card-image'/>
+        <div className='d-block mx-auto'>
+          <img src={image} className='room-card-image' />
         </div>
 
-      <div>
-      <h1 className='room-card-name'>{title}</h1>
-<p>{description}</p>
-<p>{type}</p>
-<p>{candidate}</p>
-      </div>
+        <div className=' p-2'>
+          <p className='room-card-name fs-5'>{title}</p>
+            <p className='fs-4'> {type}</p>
+          <p className='room-card-price'>₹ {price}</p>
 
-      <div>
-<h1 className='room-card-price'>₹ {price}</h1>
+         <Link to={`/book/${id}`} className='room-card-btn '>View Details</Link>
 
-<Link to={`/book/${id}`}className='room-card-btn '>Book Now</Link>
+        </div>
+
+       
       </div>
-</div>
-</div>
+    </div>
   )
 }
 

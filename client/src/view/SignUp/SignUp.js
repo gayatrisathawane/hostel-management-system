@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./SignUp.css"
 import Navbar from "../../component/Navbar/Navbar";
-import Footer from "../../component/Footer/Footer";
+
+
+
 
 function Signup() {
 
@@ -11,6 +13,7 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
   const [gender, setGender] = useState("female");
+  const [image, setimage] = useState('')
 
   const signupUser = async () => {
     if (!name) {
@@ -38,7 +41,10 @@ function Signup() {
       mobile: mobile,
       email: email,
       password: password,
-      gender: gender
+      gender: gender,
+      image: image,
+    
+
     })
 
     alert(response?.data?.message);
@@ -67,13 +73,9 @@ function Signup() {
       <div>
         <div className="signup-container-main">
           <div className="main-container">
-            <div className="container-A">
 
-            </div>
 
             <div className="signup-from-container">
-
-
               <div className="signup-from">
 
 
@@ -128,32 +130,43 @@ function Signup() {
                     onChange={(e) => {
                       setPassword(e.target.value);
                     }} />
+                </div>
 
 
+                <div>
 
-                  <div>
-
-                    <input type="radio"
-                      id="male"
-                      name="gender"
-                      checked={gender === "male"}
-                      onClick={() => {
-                        setGender("male");
-                      }}
-                    />
-                    <label htmlFor='male' className="input-heading">male</label>
+                  <input type="radio"
+                    id="male"
+                    name="gender"
+                    checked={gender === "male"}
+                    onClick={() => {
+                      setGender("male");
+                    }}
+                  />
+                  <label htmlFor='male' className="input-heading">male</label>
 
 
-                    <input type="radio"
-                      id="femlae"
-                      name="gender"
-                      checked={gender === "female"}
-                      onClick={() => {
-                        setGender("female");
-                      }}
-                    />
-                    <label htmlFor='female' className="input-heading">female</label>
-                  </div>
+                  <input type="radio"
+                    id="femlae"
+                    name="gender"
+                    checked={gender === "female"}
+                    onClick={() => {
+                      setGender("female");
+                    }}
+                  />
+                  <label htmlFor='female' className="input-heading">female</label>
+                </div>
+
+                <div>
+                  <label htmlFor="image" className="input-heading">Image</label>
+                  <input type="text"
+                    id="image"
+                    className="from-control"
+                    value={image}
+                    onChange={(e) => {
+                      setimage(e.target.value);
+                    }} />
+
 
                   <button type="button"
                     className=" singup-btn"
@@ -162,20 +175,22 @@ function Signup() {
                   </button>
 
                 </div>
+
+
+
               </div>
             </div>
 
-
           </div>
-         
-        </div>
-        <Footer />
-      </div>
+          </div>
+          </div>
 
-    </>
-  )
+
+
+        </>
+        )
 
 }
 
 
-export default Signup;
+        export default Signup;

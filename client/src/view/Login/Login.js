@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./Login.css"
+import Footer from '../../component/Footer/Footer'
 import Navbar from "../../component/Navbar/Navbar";
-import Footer from "../../component/Footer/Footer";
+
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -81,6 +82,8 @@ function Login() {
         </div>
 
     );
+           
+
 };
 
 export default Login;

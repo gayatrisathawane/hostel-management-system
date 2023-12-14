@@ -1,48 +1,48 @@
-.room-card{
-width: 80%;
-    margin: 10px 20px;
-    padding:15px 30px;
-    border: Jpx solid white;
-    background-color: white;
+.room-card {
+    /* height:400px;
+    width:400px; */
+    margin: 15px;
     border-radius: 10px;
-   border: 1px solid rgb(212, 207, 207);
+    box-shadow: 0 0 10px rgb(221, 219, 253);
 }
+
 .roomcard-container{
-    display: flex;
-    justify-content: space-between;
+    width:300px;
+   margin: 10px;
 }
-.room-card:hover{
-    background-color: rgb(246, 246, 246);
-    box-shadow: 0px 0px 5px rgb(26, 185, 233);
+
+.room-card:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(207, 243, 254);
 }
-.room-card-image{
-  width: 300px;
-    height: 250px;
-    object-fit: contain;
-    background-color: white;
-}
-.room-card-name{
-    font-size: 20px;
-    font-weight: 1000;
+
+.room-card-image {
    
-}
-.room-card-price{
-    font-size: 20px;
-    font-weight:800 ;
-    color: rgb(13, 13, 60);
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
     
+    
+} 
+
+.room-card-name {
+    font-size: 20px;
+    
+
 }
-.room-card-btn{
-display: block;
-width: 100%;
-font-size: 16px;
-text-decoration: none;
-background-color: rgb(63, 134, 248);
-color: white;
-text-align: center;
- border: none;
-  border-radius: 10px;
-  min-width: 100px;
-  padding: 10px 20px;
-  font-size: 20px;
+
+.room-card-price {
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(196, 30, 30);
+
+}
+
+.room-card-btn {
+  
+    text-decoration: none;
+    color: rgb(23, 20, 230);
+    border: none;
+    border-radius: 10px;
+   
 }

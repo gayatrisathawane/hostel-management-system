@@ -40,6 +40,7 @@ const router = createBrowserRouter([
     path: "/book/:id",
     element: <Bookroom/>,
   },
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

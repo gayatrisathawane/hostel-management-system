@@ -1,18 +1,23 @@
 .rooms-container{
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+   
 
 }
 
-.search-bar{
-    width: 400px;
+.search-bar1{
+    width: 500px;
    display: block;
     font-size: 20px;
     margin: 20px auto;
-    border: 1px solid rgb(199, 196, 196);
+    border: 1px solid rgb(57, 98, 220);
    border-radius: 50px;
-   padding: 5px 20px;
+   padding: 10px 20px;
+   outline: none;
 }
 .search-bar:hover{
     background-color: rgb(246, 246, 246);

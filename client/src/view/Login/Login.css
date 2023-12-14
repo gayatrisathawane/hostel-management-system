@@ -19,6 +19,12 @@
     margin: 20px;
     padding: 20px;
     border-radius: 30px;
+    flex-direction: row;
+    box-shadow: 0 0 5px rgb(105, 104, 104);
+    padding: 20px;
+    margin:30px;
+    border-radius: 5px;
+
 }
 
 .background-imageA{  
@@ -29,27 +35,17 @@
   margin-right: 100px;
 }
 
-.signup-message{
-    font-size: 1000px;
-    color: white;
-    display: block;
-    justify-content: center;
-    margin-top: 20px;
-}
-
+/* 
 .input-heading-login{
     width: 50px;
     padding: 10px;
     font-size: 12px;
     font-weight:400;
-}
-.from-control{
-    font-size: 12px;
-    font-weight: 400;
-    padding: 2px;
-}
+} */
+
 
 .login-btn{
+
     width: 250px;
     border: none;
     border-radius: 8px;
@@ -58,6 +54,16 @@
     padding: 3px 5px;
     color: white;
     background-color: rgb(29, 30, 112);
+
+    
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    width:400px;
+    color: white;
+    padding: 8px 10px;
+    background-color: rgb(30, 3, 69);
+
 }
 
 
