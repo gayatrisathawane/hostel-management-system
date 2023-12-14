@@ -33,7 +33,7 @@ const Contact = () => {
                 <img src={logoA} className='logos' />
               </div>
               <div>
-                <p>contact@gmail.com</p>
+                <p className='con-page-email'>contact@gmail.com</p>
                 <p>sagar123@gmail.com</p>
               </div>
               </div>
@@ -48,7 +48,7 @@ const Contact = () => {
                   <img src={logoB} className='logos' />
                 </div>
                 <div>
-                  <p>Everyday</p>
+                  <p className='con-page-time'>Everyday</p>
                   <p>10am - 5pm</p>
                 </div>
               </div>
