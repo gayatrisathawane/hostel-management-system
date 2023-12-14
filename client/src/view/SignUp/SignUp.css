@@ -1,10 +1,28 @@
 
+/* 
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 3px;
+} */
+
+.signup-container-main{
+  box-shadow: 0 0 10px rgb(185, 183, 183);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
 
 .signup-container-main{
   box-shadow: 0 0 10px rgb(185, 183, 183);
   margin: 30px;
   border-radius: 10px;
   height: 600px;
+
 }
 
 .main-container {
@@ -12,16 +30,16 @@
   flex-direction: row;
   justify-content: center;
 }
-
 /* .container-A {
-
   width: 450px;
   background-image: url("https://img.freepik.com/free-photo/three-serious-students-studying-using-tablet-computer_1262-15312.jpg?size=626&ext=jpg&ga=GA1.1.227241808.1695190605&semt=ais");
   background-position: center;
 } */
 
+
+
 .signup-from-container {
-  position: relative;
+  position: relative; 
   width: 400px;
   height: 600px;
   display: flex;
@@ -34,6 +52,14 @@
 }
 
 
+
+.signup-from {
+  width: 400px;
+  height: 400px;
+
+  display: block;
+
+}
 
 .input-heading {
   width: 50px;
@@ -59,6 +85,19 @@
   font-weight: 200;
 }
 
+/*.singup-btn{
+  width: 200px;
+  margin: 5px;
+  margin-left: 50px;
+}*/
+
+.singup-btn {
+  width: 250px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  padding: 3px 5px;
+}
 
 
 
@@ -68,8 +107,9 @@
   border-radius: 8px;
   text-align: center;
   padding: 8px 10px;
+
   color: white;
   background-color: rgb(29, 30, 112);
   margin-top: 10px;
 
-}
+} 

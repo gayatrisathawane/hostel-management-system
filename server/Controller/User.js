@@ -1,16 +1,18 @@
-import User from './../models/User.js'
+import User from "../models/user.js";
 
 //post Signup
 const postApiSignup =  async(req, res) => {
-    const { name, mobile, email, password, gender,image } = req.body;
+    const { name, mobile, email, password, gender,image,role } = req.body;
 
     const user = new User({
+        
         name,
         email,
         mobile,
         password,
         gender,
-        image
+        image,
+        role
     })
    
     try{
