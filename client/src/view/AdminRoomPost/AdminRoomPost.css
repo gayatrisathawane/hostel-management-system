@@ -12,8 +12,12 @@
 }
 .description-input{
     height: 100px;
-    width: 400px;
-    text-align: start;
+    width: 360px;
+    padding: 8px;
+    outline: none;
+    border: 1px solid rgb(81, 188, 230);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(225, 222, 222);
 }
 label{
     font-weight: bold;
@@ -21,4 +25,31 @@ label{
 .select-box{
     width: 400px;
     height: 33px;
+}
+.room-card-1{
+    width: 620px;
+border-radius: 10px;
+background-color: white;
+    /* background-color: #e6f9ff; */
+    box-shadow: 0 0 7px 0.5px gray;
+}
+.description{
+    font-size: 10px;
+    width: 320px;
+}
+.img{
+    height: 190px;
+    width: 250px;
+}
+.details{
+    width: 330px;
+}
+.input{
+    height: 35px;
+    width: 360px;
+    padding: 8px;
+    outline: none;
+    border: 1px solid rgb(81, 188, 230);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(225, 222, 222);
 }
