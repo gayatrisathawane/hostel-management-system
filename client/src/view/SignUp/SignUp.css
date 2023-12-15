@@ -1,15 +1,87 @@
 
-/* 
-body {
-  width: 100%;
-  height: 100%;
+.signup-img-container{
+  width: 40%;
+  /* background-color: antiquewhite; */
+}
+.sign-up-details{
+  width: 60%;
+  /* background-color: aqua; */
+    
+  padding: 30px;
+}
+
+.signup-img{
+  height:540px;
+  filter:drop-shadow(0 0 3px #0083ff)
+}
+
+.signup-main-container{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 3px;
+  justify-content: space-around;
+  /* background-color: #e6f9ff; */
+}
+
+.input-label{
+
+    font-size: 22px;
+    color: rgb(27, 48, 158);
+    font-weight: 600;
+
+    
+}
+
+
+
+
+.signup-input-field{
+  height: 30px;
+  width:360px;
+  padding: 18px;
+  outline: none;
+  border: 1px solid rgb(81, 188, 230);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(225, 222, 222);
+}
+
+.singup-btn{
+  display: block;
+  margin: 15px 10px;
+  background-color: #0083ff;
+  color: white;
+  padding: 7px 70px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+}
+.gender-input{
+
+  width: 20px;
+  
+}
+
+.sign-up-heading{
+ margin-bottom: 40px;
+ text-align: center;
+ font-size: 35px;
+}
+
+/* input[type=radio] {
+  border: 0px;
+  width: 50%;
+ 
 } */
 
-.signup-container-main{
+.blue-color{
+  color: #0083ff;
+}
+
+
+
+
+
+
+
+/* .signup-container-main{
   box-shadow: 0 0 10px rgb(185, 183, 183);
   margin: 20px;
   padding: 20px;
@@ -38,7 +110,7 @@ body {
 
 
 
-.signup-from-container {
+/* .signup-from-container {
   position: relative; 
   width: 400px;
   height: 600px;
@@ -85,11 +157,11 @@ body {
   font-weight: 200;
 }
 
-/*.singup-btn{
+.singup-btn{
   width: 200px;
   margin: 5px;
   margin-left: 50px;
-}*/
+}
 
 .singup-btn {
   width: 250px;
@@ -112,4 +184,4 @@ body {
   background-color: rgb(29, 30, 112);
   margin-top: 10px;
 
-} 
+}  */ 

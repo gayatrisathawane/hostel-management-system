@@ -6,6 +6,11 @@ const userSchema = new Schema({
         type: String,
         required:true
     },
+    lastname:{
+        type: String,
+        required:true
+
+    },
     mobile: {
         type: String,
         required: true,
