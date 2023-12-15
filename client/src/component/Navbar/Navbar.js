@@ -60,7 +60,7 @@ const Navbar = () => {
 
 
 
-            {user?.name ? <span className=" ms-2 p-1 fs-5 ">
+            {user?.name ? <span className=" ms-5 p-1 fs-5 ">
               <span onClick={() => {
                 localStorage.removeItem('user')
               }}> <button className=" btn  bg-danger me-2   px-2">

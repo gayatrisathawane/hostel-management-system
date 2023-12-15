@@ -6,7 +6,8 @@ import {postapireview,getapireview} from './Controller/Review.controller.js';
 import {postApiRoom, getApiAllRoom, getRoomApi, editRoom} from './Controller/room.js';
 import {postapiroombook} from './Controller/RoomBook.controller.js';
 
-import {deleteApiRoom} from './Controller/AdminRoom.js';import {getRoomBook} from './Controller/RoomBook.controller.js'
+import {deleteApiRoom} from './Controller/AdminRoom.js';
+import {getRoomBook} from './Controller/RoomBook.controller.js'
 
 import path from 'path';
 
