@@ -6,33 +6,50 @@ import axios from 'axios'
 // import Link from 'react-router-dom' 
 
 const MyRoomBook = () => {
+  const [userlocal,setUserLocal]=useState({})
   const [user,setUser] = useState({});
   const [rooms,setRooms] = useState([]);
 
   // const storeuser = JSON.parse(localStorage.getItem('user'))
 
   const loadRooms = async () => {
-    const userId = user._id;
-    if(!userId){
-      return;
-    }
-     const response = await axios.get(`/api/v1/bookrooms/user/${userId}`);
-       setRooms(response?.data?.data);
+    // const userId = user._id;
+    // if(!userId){
+    //   return;
+    // }
+     try{
+      const response = await axios.get(`/api/v1/bookrooms/user/657c3be14c9d42524e510f0d`);
+    setRooms(response?.data?.data);
+     }catch(erro){
+      console.log(erro)
+     }
   }
-  useEffect ( () => {
-    loadRooms();
-  },[user]);
+  console.log(rooms)
+  // useEffect ( () => {
+    
+  // },[]);
 
+  // const loadUserDataLS = ()=>{
+
+  //   const storageUse = JSON.parse(localStorage.getItem('user') ||'{}');
+  //    if(storageUse){
+  //     setUserLocal(storageUse._id)
+  //    }
+
+  // }
   useEffect( () =>{
-    const storageUse = JSON.parse(localStorage.getItem('user') ||'{}');
-    if(storageUse?.email){
-      setUser(storageUse);
-    }
-    else{
-      alert("You are not logged in");
-      window.location.href ="/api/signup";
-    }
+    // loadUserDataLS()
+    // if(storageUse?.email){
+    //   setUser(storageUse);
+    
+    // }
+    // else{
+    //   alert("You are not logged in");
+      // ="/login";
+    // }
+    loadRooms();
   },[])
+  console.log(userlocal)
 
   return (
     <div>
@@ -40,7 +57,7 @@ const MyRoomBook = () => {
        <h2>This Room is Booked</h2>
        <div>
         {
-         rooms?.map((room, index)=>{
+         rooms.map((room, index)=>{
           const {title, price} = room
           return(
             <div>

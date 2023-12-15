@@ -27,8 +27,8 @@ const postapiroombook = async(req,res)=>{
 }
 
 const getRoomBook = async(req,res)=>{
-    const {_id} = req.params;
-    const rooms = await Roombook.find({user:_id}).populate("user room")
+    const { _id } = req.params;
+    const rooms = await Roombook.find({user:{_id:_id}}).populate("user room")
 
     res.json({
         success:true,

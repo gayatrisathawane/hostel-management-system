@@ -1,16 +1,18 @@
 .loginbg {
     height: 380px;
-   margin-left: 120px;
-  margin-top: 30px;
+    margin-left: 120px;
+    margin-top: 30px;
 }
 
 .login-container {
 
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .login-details {
-  
+
     width: 50%;
 }
 
@@ -36,19 +38,51 @@
     border-radius: 5px;
     box-shadow: 0 0 10px rgb(225, 222, 222);
 }
-.login-btn{
-    width:500px;
+
+.login-btn {
+    width: 500px;
     margin: 20px auto;
     background-color: #0083ff;
-    border:none;
+    border: none;
     border-radius: 5px;
-    padding:5px 50px;
+    padding: 5px 50px;
     color: white;
     font-size: 20px;
 }
 
 
+@media only screen and (max-width : 768px) {
+        
 
+
+
+    .loginbg {
+        height: 300px;
+         width: 300px;
+    }
+
+    .login-container {
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .login-details{
+        padding: 10px;
+        display: block;
+        margin: 10px auto;
+        margin-left: 50px;
+    }
+
+    .input-field-login{
+        width: 350px;
+    }
+.login-btn{
+    width: 350px;
+}
+
+}
 
 
 

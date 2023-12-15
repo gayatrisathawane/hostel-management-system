@@ -7,7 +7,7 @@ const roomBookSchema = new Schema({
         ref:'User'
     },
     room:{
-        type:String,
+        type:Schema.Types.ObjectId,
         ref:'Room'
     },
     candidate:{
@@ -17,5 +17,5 @@ const roomBookSchema = new Schema({
 
 },{timestamps:true})
 
-export const Roombook = model('Roombook',roomBookSchema);
+const Roombook = model('Roombook',roomBookSchema);
 export default Roombook;
