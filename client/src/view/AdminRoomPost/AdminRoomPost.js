@@ -45,16 +45,7 @@ const AdminRoomPost = () => {
     useEffect(() => {
         loadAllRooms();
     }, [rooms])
-    const deleteRoom = async (id) => {
-        const response = await axios.delete(`/api/v1/rooms/${id}`);
-
-        if (response?.data?.success) {
-            alert(response?.data?.message, 'denger', '3000');
-            loadAllRooms();
-        }
-    }
-    
-
+ 
 
     return (
         <>
@@ -170,9 +161,6 @@ const AdminRoomPost = () => {
                                         </div>
                                         <div className='details'>
 
-                                        
-                                            <p className='delete-room' onClick={() => { deleteRoom(_id) }} >
-                                                Delete</p>
                                             <h4>{title}</h4>
                                             <h5>Type : {type}</h5>
                                             <p className='description'>Description : {description}</p>
