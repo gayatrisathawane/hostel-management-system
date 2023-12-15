@@ -41,3 +41,45 @@
 
 }
 
+.description-container{
+   
+    display: flex;
+   background-color: rgb(255, 252, 252);
+    position: relative;
+}
+
+.sub-description-img{
+    position: absolute;
+    left: 280px;
+    height: 400px;
+    width: 300px;
+    top:50px;
+}
+
+.description-img-container{
+
+    width:50%;
+  height: 500px;
+}
+
+
+.description-img-home{
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    margin-left: 80px;
+}
+
+.description-home{
+
+    padding: 20px;
+    width: 50%;
+}
+
+.read-more-btn{
+    width: 200px;
+    border: none;
+    padding: 10px 50px;
+    background-color:#0083ff;
+    color: white;
+}

@@ -1,4 +1,79 @@
-.bacground-image{
+.loginbg {
+    height: 380px;
+   margin-left: 120px;
+  margin-top: 30px;
+}
+
+.login-container {
+
+    display: flex;
+}
+
+.login-details {
+  
+    width: 50%;
+}
+
+.login-bg-container {
+    width: 50%
+}
+
+.input-heading-login {
+
+
+    font-size: 25px;
+    color: rgb(27, 48, 158);
+    font-weight: 600;
+
+}
+
+.input-field-login {
+    height: 30px;
+    width: 500px;
+    padding: 18px;
+    outline: none;
+    border: 1px solid rgb(81, 188, 230);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(225, 222, 222);
+}
+.login-btn{
+    width:500px;
+    margin: 20px auto;
+    background-color: #0083ff;
+    border:none;
+    border-radius: 5px;
+    padding:5px 50px;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .bacground-image{
     height: 100vh;
 
   }          
@@ -35,16 +110,11 @@
   margin-right: 100px;
 }
 
-/* 
-.input-heading-login{
-    width: 50px;
-    padding: 10px;
-    font-size: 12px;
-    font-weight:400;
-} */
 
 
-.login-btn{
+
+
+/* .login-btn{
 
     width: 250px;
     border: none;
@@ -64,7 +134,4 @@
     padding: 8px 10px;
     background-color: rgb(30, 3, 69);
 
-}
-
-
-
+} */
