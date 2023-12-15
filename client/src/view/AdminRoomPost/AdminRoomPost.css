@@ -1,0 +1,24 @@
+.post-room-form{
+ /* background-color: white; */
+    height: auto;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 3px 1px gray; */
+    margin: 0 70px;
+    margin-top: 30px;
+}.admin-page{
+    background-color: #e6f9ff;
+}
+.description-input{
+    height: 100px;
+    width: 400px;
+    text-align: start;
+}
+label{
+    font-weight: bold;
+}
+.select-box{
+    width: 400px;
+    height: 33px;
+}

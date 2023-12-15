@@ -63,7 +63,7 @@ app.get('/api/v1/reviews',getapireview)
 
 // room card Api-------------
 // post /room
-app.post('/api/room',postApiRoom)
+app.post('/api/rooms',postApiRoom)
 
 //get /room
 app.get('/api/rooms',getApiRoom)

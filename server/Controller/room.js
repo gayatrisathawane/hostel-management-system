@@ -39,6 +39,7 @@ const postApiRoom = async (req, res) => {
             data: allRoom
         })
     }
+    
     const getRoomApi = async(req,res)=> {
 
       const {id}=req.params;
