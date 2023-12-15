@@ -31,7 +31,7 @@ function Bookroom() {
     console.log(response?.data?.data)
   }
 useEffect(()=>{
-  loadRoom()
+  loadRoom();
 },[])
 
 

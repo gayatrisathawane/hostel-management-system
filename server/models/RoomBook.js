@@ -12,7 +12,8 @@ const roomBookSchema = new Schema({
     },
     candidate:{
         type:'Number',
-        required:true
+        default:'1'
+       
     }
 
 },{timestamps:true})
