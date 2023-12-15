@@ -50,6 +50,7 @@ background-color: white;
     width: 360px;
     padding: 8px;
     outline: none;
+    font-size: 15px;
     border: 1px solid rgb(81, 188, 230);
     border-radius: 5px;
     box-shadow: 0 0 10px rgb(225, 222, 222);

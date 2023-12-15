@@ -10,8 +10,9 @@ import { Link } from "react-router-dom";
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [type, setType] = useState('false');
 
-    const Login = async () => {
+    const login = async () => {
         const response = await axios.post("api/login", {
             email: email,
             password: password
@@ -33,6 +34,11 @@ function Login() {
         }
 
     }, [])
+
+    const userType = async ()=>{
+       setType(true)
+        
+    }
     return (
 
         <div>
@@ -46,7 +52,11 @@ function Login() {
                 </div>
 
                 <div className="login-details">
-                    <h1 className="blue-color mt-5"> WELCOME !</h1>
+                    {/* <h1 className="blue-color mt-5"> WELCOME !</h1> */}
+                    
+                    {
+                        type === true ? <h2  className="blue-color ms-1">Admin Login</h2> : <h2 className="blue-color">User Login</h2>  
+                    }
                     <div>
 
                         <div className="p-2">
@@ -72,10 +82,14 @@ function Login() {
                                     setPassword(e.target.value);
                                 }} />
                         </div>
-
+                        <div>
+                       <p className="ms-2">Select User Type :</p>
+                        <button type="button" onClick={userType} className="btn-admin ms-2">Admin</button>
+                        <button type="button" className="btn-user">User</button>
+                    </div>
 
                         <button type="button" className="login-btn ms-2"
-                            onClick={Login} >
+                            onClick={login} >
                             Login
                         </button>
 
@@ -92,16 +106,6 @@ function Login() {
 
 
             </div>
-
-
-
-
-
-
-
-
-
-
 
 
 

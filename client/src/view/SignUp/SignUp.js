@@ -17,6 +17,7 @@ function Signup() {
   const [password, setPassword] = useState("")
   const [gender, setGender] = useState("female");
   const [image, setimage] = useState('')
+ 
 
   const signupUser = async () => {
     if (!name) {
@@ -92,7 +93,9 @@ function Signup() {
           <h1 className="sign-up-heading">Welcome to <span className="blue-color">H</span>ostel<span className="blue-color">B</span>ook</h1>
 
           <div>
-
+{/* {
+  type === user? <h2>User Signup</h2> :<h2>Admin Signup</h2>
+} */}
             <div className="d-flex justify-content-evenly">
 
               <div className="p-2">
