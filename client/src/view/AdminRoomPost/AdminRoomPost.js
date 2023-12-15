@@ -35,7 +35,16 @@ const AdminRoomPost = () => {
 
 
     }
- 
+    const loadAllRooms = async () => {
+        const response = await axios.get('/api/rooms');
+        setRooms(response?.data?.data);
+        console.log(response?.data?.data)
+      }
+    
+      useEffect(() => {
+        loadAllRooms();
+      }, [])
+
 
     return (
         <>
@@ -131,7 +140,28 @@ const AdminRoomPost = () => {
                             </button>
 
                         </div></form>
-                   
+                    <div className='all-links-container'>
+
+                        {
+                            rooms?.map((roomObj, index) => {
+                                const { title,
+                                    description,
+                                    type,
+                                    price,
+                                    candidate,
+                                    image } = roomObj;
+
+                                return (
+
+                                    <div className='room-card'>
+                                       <h2>title : {title}</h2>
+                                       <h3>Type : {type}</h3>
+                                       <p>{description}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
 
                 </div>
 
