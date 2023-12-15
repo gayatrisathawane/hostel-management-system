@@ -6,7 +6,9 @@ import{postapireview,getapireview} from './Controller/Review.controller.js'
 import {postApiRoom,getApiRoom,getRoomApi} from './Controller/room.js'
 import {postapiroombook} from './Controller/RoomBook.controller.js'
 
+
 import {deleteApiRoom} from './Controller/AdminRoom.js'
+import {getRoomBook} from './Controller/RoomBook.controller.js'
 
 import path from 'path';
 
@@ -74,7 +76,8 @@ app.post('/api/v1/bookrooms',postapiroombook)
 
 app.delete('/api/v1/rooms/:_id',deleteApiRoom)
 
-
+// my booked room  //
+app.get ('/api/v1/bookrooms/user/:_id',getRoomBook)
 
 
 // search room---------------
