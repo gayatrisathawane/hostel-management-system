@@ -21,10 +21,6 @@ const roomSchema = new Schema({
         type: String,
         required: true
     },
-    stars : {
-        type: String,
-        required: true
-    },
     image : {
         type: String,
         required: true
@@ -34,4 +30,5 @@ const roomSchema = new Schema({
 });
 
 const Room = model('Room', roomSchema);
+
 export default  Room;

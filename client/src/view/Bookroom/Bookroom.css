@@ -1,0 +1,34 @@
+.book-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.bookRoom-container{
+    box-shadow: 0 0 5px rgb(207, 202, 245);
+    margin: 40px;
+    padding: 10px;
+    border-radius: 10px;
+   
+}
+
+.book-room-btn{
+    width: 500px;
+    background-color: rgb(19, 19, 117);
+    padding: 10px 60px;
+    color:white;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.search-bar{
+    width: 300px;
+    height: 25px;
+    display: block;
+    font-size: 20px;
+    margin: 20px auto;
+    border: 1px solid rgb(71, 71, 71);
+    box-shadow: 0 0 10px 2px rgb(129, 129, 129);
+   border-radius: 50px;
+   padding: 5px 20px;
+}

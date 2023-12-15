@@ -5,6 +5,12 @@ const postapireview= async(req,res)=>{
 
     const { user, description, rating}=req.body
 
+    if(!user){
+        return res.json({
+            message:"user is not log In"
+        })
+    }
+
     const reviewPost = new Review({
 
         user,description,rating
@@ -32,5 +38,9 @@ const getapireview = async(req,res)=>{
 
      })
 }
+
+
+
+
 
 export { postapireview,getapireview}

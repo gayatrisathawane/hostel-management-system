@@ -1,3 +1,129 @@
-*{
+.contact-main-container{
+  
+}
+
+.hostal-img{
+    height: 400px;
+    width: 100%;
+}
+.contact-container{
+    background-color: #e6f9ff;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.head-A{
+    font-size: 40px;
+    font-weight: 700;
+}
+.head-B{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.contact-cont-A1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 750px;
     
 }
+
+.logos{
+    width: 35px;
+    height: 35px;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+.contact-logo{
+    display: flex;
+    flex-direction: row;
+}
+.logo-ifm{
+    margin:2px;
+}
+.map{
+    height: 350px;
+    width: 380px;
+    margin-right:5px;
+    border: 1px solid #0a4275;
+}
+.contact-logo1{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    width: 240px;
+    align-items: center;
+    padding-left: 10px;
+    box-shadow: 1px 3px 5px -1px black;
+}
+.contact-logo2{
+    display: flex;
+    flex-direction: row;
+    margin-left: 110px;
+    height: 70px;
+    width: 240px;
+    padding-left: 10px;
+    align-items: center;
+    box-shadow: 1px 3px 5px -1px black;
+}
+.contact-logo3{
+    display: flex;
+    flex-direction: row;
+    margin-top: 35px;
+    height: 70px;
+    width: 240px;
+    padding-left: 10px;
+    align-items: center;
+    box-shadow: 1px 3px 5px -1px black;
+}
+.contact-logo4{
+    display: flex;
+    flex-direction: row;
+    margin-left: 110px;
+    margin-top: 35px;
+    height: 70px;
+    width: 240px;
+    padding-left: 10px;
+    align-items: center;
+    box-shadow: 1px 3px 5px -1px black;
+}
+.con-page-email{
+    margin: 0;
+    margin-top: 15px;
+}
+.con-page-time{
+    margin: 0;
+    margin-top: 15px;
+}
+
+
+@media screen and (max-width: 768px){
+
+    .map{
+        height: 320px;
+        width: 330px;
+        margin-top: 30px;
+    }
+    .contact-cont-A1{
+        display: flex;
+        flex-direction: column;
+        width: 750px;
+        
+    }
+    .contact-logo2{
+     margin-top: 25px;
+     margin-left: 1px;
+    }
+    .contact-logo4{
+        margin-top: 25px;
+        margin-left: 1px;
+       }
+    
+       .head-B{
+        width: 300px;
+       }
+}
+    

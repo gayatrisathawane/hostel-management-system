@@ -4,6 +4,8 @@ import "./SignUp.css"
 import Navbar from "../../component/Navbar/Navbar";
 
 
+
+
 function Signup() {
 
   const [name, setNmae] = useState("");
@@ -11,6 +13,7 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
   const [gender, setGender] = useState("female");
+  const [image, setimage] = useState('')
 
   const signupUser = async () => {
     if (!name) {
@@ -38,7 +41,10 @@ function Signup() {
       mobile: mobile,
       email: email,
       password: password,
-      gender: gender
+      gender: gender,
+      image: image,
+    
+
     })
 
     alert(response?.data?.message);
@@ -61,117 +67,130 @@ function Signup() {
 
   }, [])
 
-  return (<>
-
-    <Navbar />
-    <div className="main-container">
-      <div className="container-A">
-
-      </div>
-
-      <div className="signup-from-container">
+  return (
+    <>
+      <Navbar />
+      <div>
+        <div className="signup-container-main">
+          <div className="main-container">
 
 
-        <div className="signup-from">
-
-          <h1 className="text-center">Sign-Up</h1>
-
-          <div>
-            <label htmlFor="name" className="input-heading">Name</label>
-            <input type="text"
-              placeholder="Enter your name"
-              id="name"
-              className="from-control"
-              value={name}
-              onChange={(e) => {
-                setNmae(e.target.value);
-              }} />
-          </div>
-
-          <div>
-            <label htmlFor="mobile" className="input-heading">Mobile</label>
-            <input type="text"
-              placeholder="Enter your mobile"
-              id="mobile"
-              className="from-control"
-              value={mobile}
-              onChange={(e) => {
-                setMobile(e.target.value);
-              }} />
-          </div>
-
-          <div>
-            <label htmlFor="email" className="input-heading">Email</label>
-            <input type="email" 
-              placeholder="Enter your email"
-              id="email"
-              className="from-control"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }} />
-          </div>
+            <div className="signup-from-container">
+              <div className="signup-from">
 
 
-          <div>
-            <label htmlFor="password" className="input-heading">Password</label>
-            <input type="password"
-              placeholder="Enter your password"
-              id="password"
-              className="from-control"
-              value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }} />
+                <h4 className="heading">Welcome students!</h4>
+                <h1 className="text-center">Sign-Up</h1>
+
+
+                <div>
+                  <label htmlFor="name" className="input-heading">Name</label>
+                  <input type="text"
+                    placeholder="Enter your name"
+                    id="name"
+                    className="from-control"
+                    value={name}
+                    onChange={(e) => {
+                      setNmae(e.target.value);
+                    }} />
+                </div>
+
+                <div>
+                  <label htmlFor="mobile" className="input-heading">Mobile</label>
+                  <input type="text"
+                    placeholder="Enter your mobile"
+                    id="mobile"
+                    className="from-control"
+                    value={mobile}
+                    onChange={(e) => {
+                      setMobile(e.target.value);
+                    }} />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="input-heading">Email</label>
+                  <input type="email"
+                    placeholder="you@example.com"
+                    id="email"
+                    className="from-control"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }} />
+                </div>
+
+
+                <div>
+                  <label htmlFor="password" className="input-heading">Password</label>
+                  <input type="password"
+                    placeholder="Enter 8 characters or mor"
+                    id="password"
+                    className="from-control"
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                    }} />
+                </div>
+
+
+                <div>
+
+                  <input type="radio"
+                    id="male"
+                    name="gender"
+                    checked={gender === "male"}
+                    onClick={() => {
+                      setGender("male");
+                    }}
+                  />
+                  <label htmlFor='male' className="input-heading">male</label>
+
+
+                  <input type="radio"
+                    id="femlae"
+                    name="gender"
+                    checked={gender === "female"}
+                    onClick={() => {
+                      setGender("female");
+                    }}
+                  />
+                  <label htmlFor='female' className="input-heading">female</label>
+                </div>
+
+                <div>
+                  <label htmlFor="image" className="input-heading">Image</label>
+                  <input type="text"
+                    id="image"
+                    className="from-control"
+                    value={image}
+                    onChange={(e) => {
+                      setimage(e.target.value);
+                    }} />
+
+
+                  <button type="button"
+                    className=" singup-btn"
+                    onClick={signupUser}>
+                    SignUp
+                  </button>
+
+                </div>
 
 
 
-            <div>
-
-              <input type="radio"
-                id="male"
-                name="gender"
-                checked={gender === "male"}
-                onClick={() => {
-                  setGender("male");
-                }}
-              />
-              <label htmlFor='male' className="input-heading">male</label>
-
-
-              <input type="radio"
-                id="femlae"
-                name="gender"
-                checked={gender === "female"}
-                onClick={() => {
-                  setGender("female");
-                }}
-              />
-              <label htmlFor='female' className="input-heading">female</label>
+              </div>
             </div>
 
-            <button type="button"
-              className="singup-btn"
-              onClick={signupUser}>
-              Singup
-            </button>
-
           </div>
-        </div>
-      </div>
-  
+          </div>
+          </div>
 
-    </div>
 
-   
 
- 
-  
-
-  </>
-  )
+        </>
+        )
 
 }
 
 
-export default Signup;
+        export default Signup;

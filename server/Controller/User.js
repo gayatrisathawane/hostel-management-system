@@ -1,15 +1,18 @@
-import User from './../models/User.js'
+import User from "../models/user.js";
 
 //post Signup
-const postApiSignup =  async (req, res) => {
-    const { name, mobile, email, password, gender } = req.body;
+const postApiSignup =  async(req, res) => {
+    const { name, mobile, email, password, gender,image,role } = req.body;
 
     const user = new User({
+        
         name,
         email,
         mobile,
         password,
         gender,
+        image,
+        role
     })
    
     try{
@@ -17,13 +20,13 @@ const postApiSignup =  async (req, res) => {
         return res.json({
             success: true,
             data: saved,
-            message: 'Signup successfully'
+            message:'Signup successfully'
         });
     }
     catch(err){
         return res.json({
             success:false,
-            message:err.message
+            message:(err.message)
         })
     }
 
@@ -33,19 +36,20 @@ const postApiSignup =  async (req, res) => {
 
 const postApiLogin = async (req, res) => {
     const { email, password } = req.body;
-    const user = await User.findOne({ email: email,  password: password}).select('name mobile email');
+    
+    const user = await User.findOne({ email: email,  password: password});
    
-    if (user) {
+    if(user) {
         return res.json({
             success: true,
             data: user,
-            message: "successfully login"
+            message:"successfully login"
         })
     }
     else{
         return res.json({
             success:false,
-            success: "Invalid email and password"
+            message:"Invalid email and password"
         })
     }
 }

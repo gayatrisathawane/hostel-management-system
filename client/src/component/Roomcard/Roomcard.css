@@ -1,0 +1,48 @@
+.room-card {
+    /* height:400px;
+    width:400px; */
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(221, 219, 253);
+}
+
+.roomcard-container{
+    width:300px;
+   margin: 10px;
+}
+
+.room-card:hover {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgb(207, 243, 254);
+}
+
+.room-card-image {
+   
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    
+    
+} 
+
+.room-card-name {
+    font-size: 20px;
+    
+
+}
+
+.room-card-price {
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(196, 30, 30);
+
+}
+
+.room-card-btn {
+  
+    text-decoration: none;
+    color: rgb(23, 20, 230);
+    border: none;
+    border-radius: 10px;
+   
+}

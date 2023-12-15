@@ -1,10 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 
-}
-
+/* 
 body {
   width: 100%;
   height: 100%;
@@ -12,69 +7,56 @@ body {
   justify-content: center;
   align-items: center;
   letter-spacing: 3px;
+} */
+
+.signup-container-main{
+  box-shadow: 0 0 10px rgb(185, 183, 183);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+
+.signup-container-main{
+  box-shadow: 0 0 10px rgb(185, 183, 183);
+  margin: 30px;
+  border-radius: 10px;
+  height: 600px;
 
 }
 
 .main-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
-
-.container-A {
-
+/* .container-A {
   width: 450px;
   background-image: url("https://img.freepik.com/free-photo/three-serious-students-studying-using-tablet-computer_1262-15312.jpg?size=626&ext=jpg&ga=GA1.1.227241808.1695190605&semt=ais");
   background-position: center;
-}
+} */
+
+
 
 .signup-from-container {
-  position: relative;
+  position: relative; 
   width: 400px;
-  height: 400px;
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
   overflow: hidden;
   margin-left: 40px;
-  
-
-
 
 }
 
-/*.signup-from-container::before{
-  position: absolute;
-  width: 180%;
-  height: 180%;
-  content: '';
-  background-image: conic-gradient(transparent, transparent, transparent, #cfc9c5);
-  animation: rotate_border 10s linear infinite;
-}
-
-.signup-from-container::after{
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  content: '';
-  background-image: conic-gradient(transparent, transparent, transparent, #cfc9c5);
-  animation: rotate_border 6s linear infinite;
-  animation-delay: -3s;
-}
-@keyframes rotate_border{
-  0%{
-      transform: rotate(0deg);
-  }
-  100%{
-      transform: rotate(360deg);
-  }
-}*/
 
 
 .signup-from {
-  width: 250px;
-  height: 333px;
-  margin: 0px auto;
-  padding: 10px;
+  width: 400px;
+  height: 400px;
+
   display: block;
 
 }
@@ -82,14 +64,14 @@ body {
 .input-heading {
   width: 50px;
   padding: 2px;
-  font-size: 12px;
+  font-size: 18px;
   font-weight:400;
 
 }
 
 .from-control {
-  padding: 3px;
-  width: 300px;
+  padding: 5px;
+  width: 400px;
   font-size: 12px;
 }
 
@@ -98,16 +80,36 @@ body {
   font-weight: 400;
 }
 
+.heading{
+  font-size: 12px;
+  font-weight: 200;
+}
 
-.singup-btn {
+/*.singup-btn{
   width: 200px;
   margin: 5px;
+  margin-left: 50px;
+}*/
 
+.singup-btn {
+  width: 250px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   text-align: center;
-  padding: 3px;
-  color: white;
-  background-color: tomato;
-
+  padding: 3px 5px;
 }
+
+
+
+.singup-btn {
+  width: 400px;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px 10px;
+
+  color: white;
+  background-color: rgb(29, 30, 112);
+  margin-top: 10px;
+
+} 
