@@ -1,11 +1,7 @@
 import { Schema, model} from "mongoose";
 
 const userSchema = new Schema({
-    type:{
-        type: String,
-        enum:["admin", "user"],
-        required:true
-    },
+  
     name: {  
         type: String,
         required:true
@@ -35,6 +31,7 @@ const userSchema = new Schema({
     },
     role:{
         type:String,
+        enum: ["user", "admin"],
         default:'user'
     },
     image:{
