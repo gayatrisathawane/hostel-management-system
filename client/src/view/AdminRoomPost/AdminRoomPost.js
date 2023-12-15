@@ -12,6 +12,8 @@ const AdminRoomPost = () => {
     const [candidate, setCandidate] = useState("")
     const [image, setimage] = useState('');
     const [rooms, setRooms] = useState([]);
+    const [id, setId] = useState(0)
+    const [edit, setEdit] = useState(false)
 
     const addRoom = async () => {
 
@@ -44,8 +46,65 @@ const AdminRoomPost = () => {
 
     useEffect(() => {
         loadAllRooms();
-    }, [rooms])
- 
+    }, [rooms]);
+
+
+    const deleteRoom = async (id) => {
+        const response = await axios.delete(`/api/v1/rooms/${id}`);
+
+        if (response?.data?.success) {
+            alert(response?.data?.message, 'denger', '3000');
+            loadAllRooms();
+        }
+    }
+    // const updateRoom = async (id) => {
+    //     window.location.href = `/updateroom/${id}`
+    // }
+    const editRoom = async (id) => {
+        try {
+            const response = await axios.get(`/api/v1/rooms/${id}`);
+            if (response?.data?.success) {
+                const editOneRoom = response?.data?.data;
+                setTitle(editOneRoom.title);
+                setType(editOneRoom.type);
+                setDescription(editOneRoom.description);
+                setCandidate(editOneRoom.candidate);
+                setPrice(editOneRoom.price);
+                setimage(editOneRoom.image);
+                setEdit(true);
+                setId(editOneRoom._id)
+            } else {
+                alert(response?.data?.message);
+            }
+        } catch (err) {
+            console.log(err.message);
+        }
+    };
+
+    const saveEditRoom = async () => {
+        const response = await axios.put(`/api/v1/rooms/${id}`, {
+            title: title,
+            type: type,
+            candidate: candidate,
+            description: description,
+            price: price,
+            image: image
+        });
+        if (response?.data?.success) {
+            alert(response?.data?.message);
+            loadAllRooms();
+            setTitle('')
+            setType('')
+            setDescription('')
+            setCandidate('')
+            setPrice('')
+            setimage('')
+
+        }
+
+    }
+
+
 
     return (
         <>
@@ -53,7 +112,11 @@ const AdminRoomPost = () => {
                 <Navbar />
                 <div className='d-flex justify-content-evenly'>
                     <form className='post-room-form'> <div>
-                        <h2>Add Room</h2>
+                        {/* <h2>Add Room</h2> */}
+{
+    edit === true ? <h2>Update Room</h2> : <h2>Add Room</h2>
+}
+
                         <label>Title</label><br />
                         <input type="text"
                             placeholder="Enter title here.."
@@ -133,12 +196,16 @@ const AdminRoomPost = () => {
                             <br /><br />
 
 
-                            <button type="button"
+                            {/* <button type="button"
                                 className="singup-btn"
                                 onClick={addRoom}>
 
                                 Add Room
-                            </button>
+                            </button> */}
+                            {
+                                edit === true ? <button type='button' onClick={saveEditRoom} className='singup-btn'>Edit Room</button> :
+                                    <button type='button' onClick={addRoom} className='singup-btn'>Add Room</button>
+                            }
 
                         </div></form>
                     <div className='all-links-container mt-5'>
@@ -160,11 +227,18 @@ const AdminRoomPost = () => {
                                             <img src={image} alt='room-img' className='img' />
                                         </div>
                                         <div className='details'>
-
+                                            <p className='edit-room'
+                                                onClick={() => { editRoom(_id) }} >
+                                                Edit
+                                            </p>
+                                            <p className='delete-room'
+                                                onClick={() => { deleteRoom(_id) }} >
+                                                Delete
+                                            </p>
                                             <h4>{title}</h4>
                                             <h5>Type : {type}</h5>
                                             <p className='description'>Description : {description}</p>
-                                            <h5>Rent :  {price}</h5>
+                                            <h5>Rent :  ₹ {price}</h5>
                                             <h6>Allow Candidate : {candidate}</h6></div>
 
                                     </div>
