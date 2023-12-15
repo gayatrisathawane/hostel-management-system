@@ -1,0 +1,64 @@
+.post-room-form{
+ /* background-color: white; */
+    height: auto;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 3px 1px gray; */
+    margin: 0 70px;
+    margin-top: 30px;
+}.admin-page{
+    background-color: #e6f9ff;
+}
+.description-input{
+    height: 100px;
+    width: 360px;
+    padding: 8px;
+    outline: none;
+    border: 1px solid rgb(81, 188, 230);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(225, 222, 222);
+}
+label{
+    font-weight: bold;
+}
+.select-box{
+    width: 400px;
+    height: 33px;
+}
+.room-card-1{
+    width: 620px;
+border-radius: 10px;
+background-color: white;
+    /* background-color: #e6f9ff; */
+    box-shadow: 0 0 7px 0.5px gray;
+    position: relative;
+}
+.description{
+    font-size: 10px;
+    width: 320px;
+}
+.img{
+    height: 190px;
+    width: 250px;
+}
+.details{
+    width: 330px;
+}
+.input{
+    height: 35px;
+    width: 360px;
+    padding: 8px;
+    outline: none;
+    border: 1px solid rgb(81, 188, 230);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(225, 222, 222);
+}
+.delete-room{
+    color: red;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-weight: bold;
+    cursor: pointer;
+}

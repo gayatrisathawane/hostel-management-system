@@ -15,6 +15,7 @@ const roomSchema = new Schema({
     },
     type:{
         type: String,
+        enum : ["furnish","unfurnish", "semi-fernish"],
         required: true
     },
     candidate :{
