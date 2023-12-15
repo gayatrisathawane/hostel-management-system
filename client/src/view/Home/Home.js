@@ -42,35 +42,29 @@ const Home = () => {
 
   }
 
-  // {role=='admin' ? window.location.href='/admin/roompost' : 'you are not access this page'}
+  
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user') || '{}')
     setUser(user)
 
+    if(user?.role ==='admin'){
+      window.location.href='/adminroom'
+    }
+
   }, [])
 
 
-  // const deleteReview = async(_id)=>{
-
-  //   const deleteUserReview = await axios.delete(`/api/v1/review/:${_id}`)
-
-  //   if(response.data.success){
-  //     loadAllReview()
+   
 
 
-  //   }
-
-  // }
-
-
-
+  
   return (
     <div>
       <Navbar />
 
 
 
-      <div className='p-1 home-container mt-5 py-5'>
+      <div className='p-1 home-container  py-5'>
         <div className=' row'>
 
           <div className='col-md-6'>
@@ -107,17 +101,18 @@ const Home = () => {
               const { createdAt, rating, description } = review
               const user = review?.user?.name
               const date = new Date(createdAt).toLocaleDateString()
+              const time = new Date(createdAt).toLocaleTimeString()
 
               return (
                 <div className='container-review p-2' >
 
-                  <div className='d-flex ps-2 pt-2'>
+                  <div className='d-flex'>
 
-                    <img src={review?.user?.image} height="40px" alt="user" className='mt-2 p-1 rounded-circle border border-danger' />
+                    <img src={review?.user?.image} height="50px"  width="50px" alt="user" className='mt-2 p-1 rounded-circle border border-danger' />
 
-                    <div className='ms-2'>
-                      <span className='fs-4'>{user}</span><br />
-                      <p>{date}</p>
+                    <div className='ms-2 '>
+                      <span className='fs-4 mt-2'>{user}</span><br />
+                    
                     </div>
 
                     {/* <p onClick={()=>{
@@ -128,6 +123,11 @@ const Home = () => {
 
                   <p className='fs-5'>{rating}</p>
                   <p className='mt-3'>{description}</p>
+                  <div className='d-flex justify-content-between'>
+                  <p>{date}</p>
+                     <p>{time}</p> 
+                    </div>
+
                 </div>
 
               )

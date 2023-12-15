@@ -6,6 +6,8 @@ import{postapireview,getapireview} from './Controller/Review.controller.js'
 import {postApiRoom,getApiRoom,getRoomApi} from './Controller/room.js'
 import {postapiroombook} from './Controller/RoomBook.controller.js'
 
+import {deleteApiRoom} from './Controller/AdminRoom.js'
+
 import path from 'path';
 
 dotenv.config()
@@ -69,6 +71,8 @@ app.get('/api/rooms',getApiRoom)
 app.get('/api/v1/rooms/:id',getRoomApi)
 
 app.post('/api/v1/bookrooms',postapiroombook)
+
+app.delete('/api/v1/rooms/:_id',deleteApiRoom)
 
 
 

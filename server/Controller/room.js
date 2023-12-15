@@ -23,7 +23,7 @@ const postApiRoom = async (req, res) => {
        catch(err){
         res.json({
             success: false,
-            message: "err.message"
+            message: err.message
           })
        }
     }

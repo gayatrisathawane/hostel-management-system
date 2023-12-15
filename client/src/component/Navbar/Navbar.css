@@ -1,0 +1,9 @@
+.user-profile{
+    border-radius: 50%;
+    height:40px;
+}
+
+.username-profile{
+    display: flex;
+    align-items: center;
+}

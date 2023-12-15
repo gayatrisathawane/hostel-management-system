@@ -14,7 +14,7 @@
   
     box-shadow: 0px 0px 2px rgb(188, 164, 255);
     margin: 10px;
-
+     padding:10px;
     border-radius: 10px ;
 }
 .container-review:hover{
