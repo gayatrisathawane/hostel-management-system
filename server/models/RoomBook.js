@@ -17,4 +17,5 @@ const roomBookSchema = new Schema({
 
 },{timestamps:true})
 
-export const Roombook = model('Roombook',roomBookSchema)
+export const Roombook = model('Roombook',roomBookSchema);
+export default Roombook;
