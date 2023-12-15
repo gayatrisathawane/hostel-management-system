@@ -1,13 +1,11 @@
 import mongoose from "mongoose";
 import express  from "express";
-import dotenv from 'dotenv'
-import {postApiLogin, postApiSignup} from './Controller/User.js'
-import{postapireview,getapireview} from './Controller/Review.controller.js'
-import {postApiRoom,getApiRoom,getRoomApi} from './Controller/room.js'
-import {postapiroombook} from './Controller/RoomBook.controller.js'
-
-import {deleteApiRoom} from './Controller/AdminRoom.js'
-
+import dotenv from 'dotenv';
+import {postApiLogin, postApiSignup} from './Controller/User.js';
+import {postapireview,getapireview} from './Controller/Review.controller.js';
+import {postApiRoom, getApiAllRoom, getRoomApi, editRoom} from './Controller/room.js';
+import {postapiroombook} from './Controller/RoomBook.controller.js';
+import {deleteApiRoom} from './Controller/AdminRoom.js';
 import path from 'path';
 
 dotenv.config()
@@ -66,13 +64,15 @@ app.get('/api/v1/reviews',getapireview)
 app.post('/api/rooms',postApiRoom)
 
 //get /room
-app.get('/api/rooms',getApiRoom)
-
-app.get('/api/v1/rooms/:id',getRoomApi)
+app.get('/api/rooms',getApiAllRoom)
 
 app.post('/api/v1/bookrooms',postapiroombook)
 
 app.delete('/api/v1/rooms/:_id',deleteApiRoom)
+
+app.get('/api/v1/rooms/:id',getRoomApi)
+
+app.put('/api/v1/rooms/:_id', editRoom)
 
 
 

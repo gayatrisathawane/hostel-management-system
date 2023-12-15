@@ -2,6 +2,7 @@ import './AdminRoomPost.css'
 import Navbar from '../../component/Navbar/Navbar'
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
+// import showToast from 'crunchy-toast'
 
 const AdminRoomPost = () => {
     const [title, setTitle] = useState("");
@@ -22,7 +23,7 @@ const AdminRoomPost = () => {
                 price: price,
                 candidate: candidate,
                 image: image
-            })
+            });
 
             // alert(response?.data?.massage)
             if (response?.data?.success) {
@@ -39,11 +40,20 @@ const AdminRoomPost = () => {
         const response = await axios.get('/api/rooms');
         setRooms(response?.data?.data);
         console.log(response?.data?.data)
-      }
-    
-      useEffect(() => {
+    }
+
+    useEffect(() => {
         loadAllRooms();
-      }, [])
+    }, [rooms])
+    const deleteRoom = async (id) => {
+        const response = await axios.delete(`/api/v1/rooms/${id}`);
+
+        if (response?.data?.success) {
+            alert(response?.data?.message, 'denger', '3000');
+            loadAllRooms();
+        }
+    }
+    
 
 
     return (
@@ -145,6 +155,7 @@ const AdminRoomPost = () => {
                         {
                             rooms?.map((roomObj, index) => {
                                 const { title,
+                                    _id,
                                     description,
                                     type,
                                     price,
@@ -155,14 +166,19 @@ const AdminRoomPost = () => {
 
                                     <div className='room-card-1 p-2 d-flex justify-content-between mt-4'>
                                         <div className='img'>
-                                            <img src={image} alt='room-img' className='img'/>
+                                            <img src={image} alt='room-img' className='img' />
                                         </div>
-                                       <div className='details'><h4>{title}</h4>
-                                       <h5>Type : {type}</h5>
-                                       <p className='description'>Description : {description}</p>
-                                       <h5>Rent : Ru {price}</h5>
-                                       <h6>Allow Candidate : {candidate}</h6></div>
-                                      
+                                        <div className='details'>
+
+                                        
+                                            <p className='delete-room' onClick={() => { deleteRoom(_id) }} >
+                                                Delete</p>
+                                            <h4>{title}</h4>
+                                            <h5>Type : {type}</h5>
+                                            <p className='description'>Description : {description}</p>
+                                            <h5>Rent :  {price}</h5>
+                                            <h6>Allow Candidate : {candidate}</h6></div>
+
                                     </div>
                                 )
                             })

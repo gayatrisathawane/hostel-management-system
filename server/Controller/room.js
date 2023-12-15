@@ -28,7 +28,7 @@ const postApiRoom = async (req, res) => {
        }
     }
 
-    const getApiRoom = async (req,res)=>{
+    const getApiAllRoom = async (req,res)=>{
  
 
         const allRoom = await Room.find();
@@ -39,12 +39,32 @@ const postApiRoom = async (req, res) => {
             data: allRoom
         })
     }
-    
-    const getRoomApi = async(req,res)=> {
+    const editRoom = async (req, res) => {
+      const { id } = req.params
+  
+      const { title, description,candidate, price, type,image } = req.body;
+  
+      await Room.updateOne({ _id: id },
+          {
+              $set: {
+                title, description,candidate, price, type,image
+              }
+          })
+  
+      const updateRoom = await Room.findOne({ _id: id })
+  
+  
+      res.json({
+          success: "true",
+          data: updateRoom,
+          message: "Room details update successfully.!"
+      })
+  }
+
+
+ const getRoomApi = async(req,res)=> {
 
       const {id}=req.params;
-
-
       try{
         const getroombyId = await Room.findOne({ _id :id})
 
@@ -62,10 +82,6 @@ const postApiRoom = async (req, res) => {
         })
       }
 
-      
-
-
-
     }
 
-    export {postApiRoom,getApiRoom,getRoomApi}
+    export {postApiRoom, getApiAllRoom, getRoomApi, editRoom};
