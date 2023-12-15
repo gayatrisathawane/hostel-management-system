@@ -93,7 +93,7 @@ function Signup() {
 
           <div>
 
-            <div className="d-flex justify-content-evenly">
+            <div className="d-flex inputsignup">
 
               <div className="p-2">
 
@@ -135,7 +135,7 @@ function Signup() {
 
 
           <div>
-            <div className="d-flex">
+            <div className="inputsignup d-flex">
 
               <div className="p-2">
                 <label htmlFor="mobile" className="input-label" >Mobile</label>
@@ -168,7 +168,7 @@ function Signup() {
 
 
           <div>
-            <div className="d-flex">
+            <div className="d-flex inputsignup">
 
 
               <div className="p-2">
@@ -206,34 +206,34 @@ function Signup() {
           </div>
 
           <div>
-            <div className="d-flex">
+            <div className="d-flex gender-input">
 
-              <label className="input-label ms-2">Gender :-</label>
+              <label className="input-label ms-2">Gender </label>
 
-              <div>
+              <div className="d-flex">
 
                 <input type="radio"
                   id="male"
                   name="gender"
-                  className="gender-input ms-5"
+                  className="gender-input-field ms-5 "
                   checked={gender === "male"}
                   onClick={() => {
                     setGender("male");
                   }}
                 />
-                <label htmlFor='male' className="fs-4 ms-2">Male</label>
-
-
+                <label htmlFor='male' className="fs-4 ms-2 gender-label">Male</label>
+</div>
+<div className="d-flex">
                 <input type="radio"
                   id="femlae"
                   name="gender"
-                  className="gender-input ms-5"
+                  className="gender-input-field ms-5 "
                   checked={gender === "female"}
                   onClick={() => {
                     setGender("female");
                   }}
                 />
-                <label htmlFor='female' className="fs-4 ms-2">Female</label>
+                <label htmlFor='female' className="fs-4 ms-2 gender-label">Female</label>
               </div>
 
             </div>

@@ -12,7 +12,7 @@
 
 .signup-img{
   height:540px;
-  filter:drop-shadow(0 0 3px #0083ff)
+  filter:drop-shadow(0 0 3px #1990ff)
 }
 
 .signup-main-container{
@@ -75,7 +75,41 @@
   color: #0083ff;
 }
 
+@media only screen and (max-width : 768px) {
 
+  .sign-up-heading{
+    width:200px;
+  }
+  .signup-img{
+    height:500px;
+    filter:drop-shadow(0 0 3px #1990ff)
+  }
+
+  
+
+  .signup-main-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  
+  .inputsignup{
+    display: flex;
+  flex-direction: column;
+
+  }
+
+  .signup-img{
+
+    height:400px;
+  }
+
+  
+
+  
+
+}
 
 
 
