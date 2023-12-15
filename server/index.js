@@ -5,7 +5,9 @@ import {postApiLogin, postApiSignup} from './Controller/User.js';
 import {postapireview,getapireview} from './Controller/Review.controller.js';
 import {postApiRoom, getApiAllRoom, getRoomApi, editRoom} from './Controller/room.js';
 import {postapiroombook} from './Controller/RoomBook.controller.js';
-import {deleteApiRoom} from './Controller/AdminRoom.js';
+
+import {deleteApiRoom} from './Controller/AdminRoom.js';import {getRoomBook} from './Controller/RoomBook.controller.js'
+
 import path from 'path';
 
 dotenv.config()
@@ -74,7 +76,8 @@ app.get('/api/v1/rooms/:id',getRoomApi)
 
 app.put('/api/v1/rooms/:_id', editRoom)
 
-
+// my booked room  //
+app.get ('/api/v1/bookrooms/user/:_id',getRoomBook)
 
 
 // search room---------------

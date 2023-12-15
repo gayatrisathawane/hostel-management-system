@@ -34,8 +34,8 @@
 
 
 .signup-input-field{
-  height: 30px;
-  width:360px;
+  height: 32px;
+  width:340px;
   padding: 18px;
   outline: none;
   border: 1px solid rgb(81, 188, 230);
@@ -74,6 +74,8 @@
 .blue-color{
   color: #0083ff;
 }
+
+
 
 
 

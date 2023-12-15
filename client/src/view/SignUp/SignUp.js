@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function Signup() {
 
   const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [lastname, setLastName] = useState("");
   const [mobile, setMobile] = useState('');
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("")
@@ -28,7 +28,7 @@ function Signup() {
       return;
     }
 
-    if (!lastName) {
+    if (!lastname) {
       alert("LastName is requred");
       return;
     }
@@ -46,7 +46,7 @@ function Signup() {
 
     const response = await axios.post("/api/signup", {
       name: name,
-      lastName: lastName,
+      lastname: lastname,
       mobile: mobile,
       email: email,
       password: password,
@@ -114,12 +114,12 @@ function Signup() {
               <div className="p-2">
 
 
-                <label htmlFor="name" className="input-label"> Last Name</label>
+                <label htmlFor="lastname" className="input-label"> Last Name</label>
                 <input type="text"
                   placeholder="Enter your name"
-                  id="name"
+                  id="lastname"
                   className="signup-input-field"
-                  value={lastName}
+                  value={lastname}
                   onChange={(e) => {
                     setLastName(e.target.value);
                   }} />
@@ -239,16 +239,20 @@ function Signup() {
             </div>
           </div>
 
+          
 
-
-          <button type="button"
+           <button type="button"
             className=" singup-btn"
             onClick={signupUser}>
             SignUp
           </button>
 
-          <Link className="text-decoration-none text-center" to='/login'><p className="fs-5">Already have an account ?</p></Link>
-          <div>
+          <Link className="text-decoration-none" to='/login'><p className="fs-5 text-center">Already have an account ?</p></Link>
+          
+
+         
+
+         <div>
           </div>
         </div>
       </div>

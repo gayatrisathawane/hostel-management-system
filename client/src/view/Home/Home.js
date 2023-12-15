@@ -42,22 +42,22 @@ const Home = () => {
 
   }
 
-  
+
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user') || '{}')
     setUser(user)
 
-    if(user?.role ==='admin'){
-      window.location.href='/adminroom'
+    if (user?.role === 'admin') {
+      window.location.href = '/adminroom'
     }
 
   }, [])
 
 
-   
 
 
-  
+
+
   return (
     <div>
       <Navbar />
@@ -90,6 +90,38 @@ const Home = () => {
         </div>
       </div><br />
 
+      <div className='description-container'>
+
+        <div class="description-img-container">
+          <img src="https://budgettraveller.org/wp-content/uploads/2017/10/1.B8-a.jpg" className='description-img-home' alt="description-img" />
+
+          <img src="https://i.pinimg.com/736x/d3/17/22/d317227a4e7424a80cc15f9b18075852.jpg" className='sub-description-img'/>
+
+        </div>
+        <div className='description-home'>
+
+          <h2 className='mt-4'> All the rooms are spacious with three accommodation</h2>
+          <p className='fs-4'>All the rooms are spacious with three seated accommodation, having almost independent and exclusive living and study areas for each inmate. A separate dining hall including a centralized kitchen with an area of over 7500 sq.
+          </p>
+          <button className='read-more-btn'>Read More ....</button>
+
+        </div>
+
+
+      </div>
+
+      <h1 className='text-center'>Services</h1>
+
+
+
+
+
+
+
+
+
+
+
 
       <div>
         <h1 className='text-center'>What People Say About Us </h1>
@@ -108,25 +140,20 @@ const Home = () => {
 
                   <div className='d-flex'>
 
-                    <img src={review?.user?.image} height="50px"  width="50px" alt="user" className='mt-2 p-1 rounded-circle border border-danger' />
+                    <img src={review?.user?.image} height="50px" width="50px" alt="user" className='mt-2 p-1 rounded-circle border border-danger' />
 
                     <div className='ms-2 '>
                       <span className='fs-4 mt-2'>{user}</span><br />
-                    
+
                     </div>
-
-                    {/* <p onClick={()=>{
-                deleteReview(user?._id)
-              }}>❌</p> */}
-
                   </div>
 
                   <p className='fs-5'>{rating}</p>
                   <p className='mt-3'>{description}</p>
                   <div className='d-flex justify-content-between'>
-                  <p>{date}</p>
-                     <p>{time}</p> 
-                    </div>
+                    <p>{date}</p>
+                    <p>{time}</p>
+                  </div>
 
                 </div>
 
