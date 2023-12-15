@@ -60,5 +60,14 @@ background-color: white;
     right: 10px;
     top: 0;
     font-weight: bold;
+    cursor: pointer;font-size: 14px;
+}
+.edit-room{
+    color: green;
+    position: absolute;
+    right: 70px;
+    top: 0;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
 }
