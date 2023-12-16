@@ -113,9 +113,9 @@ const AdminRoomPost = () => {
                 <div className='d-flex justify-content-evenly'>
                     <form className='post-room-form'> <div>
                         {/* <h2>Add Room</h2> */}
-{
-    edit === true ? <h2>Update Room</h2> : <h2>Add Room</h2>
-}
+                        {
+                            edit === true ? <h2>Update Room</h2> : <h2>Add Room</h2>
+                        }
 
                         <label>Title</label><br />
                         <input type="text"

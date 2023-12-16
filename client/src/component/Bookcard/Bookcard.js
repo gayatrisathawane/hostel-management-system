@@ -3,12 +3,7 @@ import './Bookcard.css'
 
 function Bookcard({title, description, price,type,category, image}) {
 
-   const booknow = async()=>{
-    
-    alert ('Booking Successfully');
-    window.location.href='/'
-
-   }
+  
 
   return (
     
@@ -21,7 +16,7 @@ function Bookcard({title, description, price,type,category, image}) {
 <p>{description}</p>
 <h1 className='book-card-price'>₹ {price}</h1>
 
-<button className='book-now-btn ' onClick={booknow}>Book Now</button>
+
 
     </div>
   )
