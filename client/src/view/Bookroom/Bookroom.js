@@ -31,7 +31,7 @@ function Bookroom() {
     console.log(response?.data?.data)
   }
 useEffect(()=>{
-  loadRoom()
+  loadRoom();
 },[])
 
 
@@ -39,21 +39,23 @@ const user = JSON.parse(localStorage.getItem('user'))
 
 
 
-const bookRoom = async () =>{
+const booknow = async () => {
+  try{
+  const response = await axios.post('/api/v1/bookrooms', {
+    user: user._id,
+    room: room._id,
+    candidate: candidate,
+  });
 
-  const response = await axios.post('/api/v1/bookrooms',{
-
-    user:user._id,
-    room:room._id,
-    candidate:candidate
-
-  })
-
-  alert(response?.data?.message)
-
-  window.location.href='/room'
+  alert(response?.data?.message);
+  if (response?.data?.success) {
+    window.location.href = "/myroombook"
+  } 
+}catch (err) {
+alert(err.massage)
 }
 
+};
   return (
 
     <div>
@@ -77,9 +79,9 @@ const bookRoom = async () =>{
         setcandidate(e.target.value)
       }}/></p>
 
-      <button className=' book-room-btn' onClick={()=>{
-        bookRoom()
-      }} >Book room</button>
+<button className='singup-btn' onClick={booknow}>
+          Book Now
+        </button>
 
         </div>
       

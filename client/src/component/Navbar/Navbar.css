@@ -1,9 +1,31 @@
 .user-profile{
     border-radius: 50%;
     height:40px;
+    padding: 2px;
+background-color: gray;
 }
 
 .username-profile{
     display: flex;
     align-items: center;
 }
+.logo-name{
+    color: rgb(14, 149, 238);
+    font-family: gabriola;
+    font-size: 40px;
+    font-weight: 800;
+    margin-left: 30px;
+  }
+  .user-icon{
+    border-radius: 50%;
+    height:40px;
+    padding: 2px;
+    background-color: gray;
+  }
+  .nav-hover-1:hover{
+    background-color: rgb(161, 210, 243);
+    height: 40px;
+    border-radius: 30px;
+    color: white;
+    
+  }

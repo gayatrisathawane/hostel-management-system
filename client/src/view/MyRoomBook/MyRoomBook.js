@@ -6,33 +6,63 @@ import axios from 'axios'
 // import Link from 'react-router-dom' 
 
 const MyRoomBook = () => {
-  const [user,setUser] = useState({});
-  const [rooms,setRooms] = useState([]);
+  // const [userlocal,setUserLocal]=useState({})
+  // const [user,setUser] = useState({});
+  const [room,setRoom] = useState([]);
+  const [id, setId] = useState(0)
 
-  // const storeuser = JSON.parse(localStorage.getItem('user'))
+  // const storeuser = JSON.parse(localStorage.getItem('user') || '{}')
 
-  const loadRooms = async () => {
-    const userId = user._id;
-    if(!userId){
-      return;
-    }
-     const response = await axios.get(`/api/v1/bookrooms/user/${userId}`);
-       setRooms(response?.data?.data);
-  }
-  useEffect ( () => {
-    loadRooms();
-  },[user]);
+  // const loadRooms = async () => {
+  //   const userId = storeuser._id;
+  //   if(!userId){
+  //     return;
+  //   }
+  //    try{
+  //     const response = await axios.get(`/api/v1/bookrooms/user/${userId}`);
+  //   setRooms(response?.data?.data);
+  //    }catch (err) {
+  //     console.error("Error fetching room data:", err);
+  //   }
+    
+  // };
+  // console.log(rooms);
 
-  useEffect( () =>{
-    const storageUse = JSON.parse(localStorage.getItem('user') ||'{}');
-    if(storageUse?.email){
-      setUser(storageUse);
-    }
-    else{
-      alert("You are not logged in");
-      window.location.href ="/api/signup";
-    }
-  },[])
+  // useEffect(()=>{
+  //   loadRooms();
+  // }, []);
+
+  // const loadUserDataLS = ()=>{
+
+  //   const storageUse = JSON.parse(localStorage.getItem('user') ||'{}');
+  //    if(storageUse){
+  //     setUserLocal(storageUse._id)
+  //    }
+
+  // }
+ // useEffect( () =>{
+    // loadUserDataLS()
+    // if(storageUse?.email){
+    //   setUser(storageUse);
+    
+    // }
+    // else{
+    //   alert("You are not logged in");
+      // ="/login";
+    // }
+  //  loadRooms();
+  //},[])
+  // console.log(userlocal)
+
+  const loadBoodedRooms = async () => {
+    const response = await axios.get(`/api/v1/bookrooms/user/${id}`);
+    const roomData = response?.data?.data;
+
+};
+
+useEffect(() => {
+  loadBoodedRooms();
+}, []);
 
   return (
     <div>
@@ -40,13 +70,19 @@ const MyRoomBook = () => {
        <h2>This Room is Booked</h2>
        <div>
         {
-         rooms?.map((room, index)=>{
-          const {title, price} = room
+         room?.map((singleroom, index)=>{
+          const {title, price} = singleroom;
           return(
             <div key={index}>
+<<<<<<< HEAD
           <h1>{title}</h1>
           <h1>{price}</h1>
         </div>
+=======
+              <h1>{title}</h1>
+              <h1>{price}</h1>
+            </div>
+>>>>>>> c00610b3dc730470116605bdecdec6acf2408774
           )
          })
         }

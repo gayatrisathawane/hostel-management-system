@@ -9,6 +9,7 @@ import Bookroom from './view/Bookroom/Bookroom.js'
 import  AdminRoomPost from './view/AdminRoomPost/AdminRoomPost.js'
 
 
+import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 

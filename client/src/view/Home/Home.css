@@ -1,37 +1,39 @@
-
-.home-hostel-img{
-    width: 600px; 
+.home-hostel-img {
+    box-shadow: 0 0 10px 2px;
+    border-radius: 20px;
+    margin-top: -50px;
 }
 
 
-.home-container{
-    background-color: #e6f9ff;
+.home-container {
+    /* background-color: #e6f9ff; */
+    padding-top: 230px;
+   
 }
 
-.container-review{
-     
-    width:320px;
-  
-    box-shadow: 0px 0px 2px rgb(188, 164, 255);
+.container-review {
+    width: 370px;
+    box-shadow: 0px 0px 2px rgb(21, 121, 236);
     margin: 10px;
-     padding:10px;
-    border-radius: 10px ;
-}
-.container-review:hover{
-    background-color: rgb(246, 246, 246);
-    box-shadow: 0px 0px 5px rgb(185, 167, 243);
-    
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.review-container{
-  border-radius: 10px;
+.container-review:hover {
+    background-color: rgb(253, 251, 251);
+    /* box-shadow: 0px 0px 5px rgb(24, 2, 110);
+     */
+}
+
+.review-container {
+    border-radius: 10px;
     border: 1px solid black;
     padding: 20px;
-   margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
-.input-box{
-    width:400px;
+.input-box {
+    width: 400px;
     box-shadow: 0 0 8px rgb(169, 166, 166);
     margin-left: 10px;
     outline: none;
@@ -41,3 +43,120 @@
 
 }
 
+.description-container {
+
+    display: flex;
+    background-color: rgb(255, 252, 252);
+    position: relative;
+}
+
+.sub-description-img {
+    position: absolute;
+    left: 280px;
+    height: 400px;
+    width: 300px;
+    top: 50px;
+}
+
+.description-img-container {
+
+    width: 50%;
+    height: 500px;
+}
+
+
+.description-img-home {
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    margin-left: 80px;
+}
+
+.description-home {
+
+    padding: 20px;
+    width: 50%;
+}
+
+.read-more-btn {
+    width: 200px;
+    border: none;
+    padding: 10px 50px;
+    background-color: #0083ff;
+    color: white;
+}
+.signup-img-poster{
+    box-shadow: 0 0 7px 1px grey;
+   margin-top: 100px;
+   margin-right: 15px;
+   margin-left: 15px;
+  /* width: 450px; */
+   height: 260px;
+}
+.img-div{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.footer-head{
+
+    margin-top: 50px;
+    background-image: url(https://img.freepik.com/free-photo/side-view-roommates-laying-bed_23-2149485690.jpg?size=626&ext=jpg&ga=GA1.1.587441093.1698208905&semt=ais);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    width: 100%;
+}
+.fs{
+    font-size: 50px;
+    text-align: center;
+    padding-top: 180px;
+    color: white;
+}
+.singup{
+    text-decoration: none !important;
+    background-color: rgb(32, 32, 125);
+    color: white;
+    height: 50px;
+    width: 400px;
+    font-weight: bold;
+    margin-top: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+}
+.para{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+}
+.header{
+    background-image: url(https://img.freepik.com/premium-photo/hotel-room-interior_59436-45.jpg?size=626&ext=jpg&ga=GA1.1.587441093.1698208905&semt=ais);
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 90px;
+}
+.row{
+    /* background-color: #0083ff; */
+   color: white;
+    position: absolute;
+}
+
+.heading{
+    font-size: 50px;
+    margin-top: -50px;
+    
+}
+.s{
+    color: #0083ff;
+}
+.text{
+    /* font-weight: bold; */
+}
