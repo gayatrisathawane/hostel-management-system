@@ -8,28 +8,29 @@ import axios from 'axios'
 const MyRoomBook = () => {
   // const [userlocal,setUserLocal]=useState({})
   // const [user,setUser] = useState({});
-  const [rooms,setRooms] = useState([]);
+  const [room,setRoom] = useState([]);
+  const [id, setId] = useState(0)
 
-  const storeuser = JSON.parse(localStorage.getItem('user') || '{}')
+  // const storeuser = JSON.parse(localStorage.getItem('user') || '{}')
 
-  const loadRooms = async () => {
-    const userId = storeuser._id;
-    if(!userId){
-      return;
-    }
-     try{
-      const response = await axios.get(`/api/v1/bookrooms/user/${userId}`);
-    setRooms(response?.data?.data);
-     }catch (err) {
-      console.error("Error fetching room data:", err);
-    }
+  // const loadRooms = async () => {
+  //   const userId = storeuser._id;
+  //   if(!userId){
+  //     return;
+  //   }
+  //    try{
+  //     const response = await axios.get(`/api/v1/bookrooms/user/${userId}`);
+  //   setRooms(response?.data?.data);
+  //    }catch (err) {
+  //     console.error("Error fetching room data:", err);
+  //   }
     
-  };
-  console.log(rooms);
+  // };
+  // console.log(rooms);
 
-  useEffect(()=>{
-    loadRooms();
-  }, []);
+  // useEffect(()=>{
+  //   loadRooms();
+  // }, []);
 
   // const loadUserDataLS = ()=>{
 
@@ -53,13 +54,23 @@ const MyRoomBook = () => {
   //},[])
   // console.log(userlocal)
 
+  const loadBoodedRooms = async () => {
+    const response = await axios.get(`/api/v1/bookrooms/user/${id}`);
+    const roomData = response?.data?.data;
+
+};
+
+useEffect(() => {
+  loadBoodedRooms();
+}, []);
+
   return (
     <div>
       <Navbar/>
        <h2>This Room is Booked</h2>
        <div>
         {
-         rooms?.map((singleroom, index)=>{
+         room?.map((singleroom, index)=>{
           const {title, price} = singleroom;
           return(
             <div key={index}>

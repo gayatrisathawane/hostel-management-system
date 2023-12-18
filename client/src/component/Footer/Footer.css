@@ -1,10 +1,12 @@
 .footer-bg{
     background-color: #0a4275;;
     color: aliceblue;
+    height: 300px;
 }
 
 .copywrite{
     background-color: rgba(0, 0, 0, 0.2);;
+    margin-top: 200px;
 }
 
 

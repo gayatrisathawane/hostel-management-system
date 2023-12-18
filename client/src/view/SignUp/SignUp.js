@@ -17,6 +17,7 @@ function Signup() {
   const [password, setPassword] = useState("")
   const [gender, setGender] = useState("female");
   const [image, setimage] = useState('')
+ 
 
   const signupUser = async () => {
     if (!name) {
