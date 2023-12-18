@@ -89,8 +89,6 @@ const Home = () => {
 
         </div>
       </div><br />
-
-
       <div>
         <h1 className='text-center'>What People Say About Us </h1>
 

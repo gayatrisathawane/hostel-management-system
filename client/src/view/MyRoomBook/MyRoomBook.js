@@ -43,10 +43,10 @@ const MyRoomBook = () => {
          rooms?.map((room, index)=>{
           const {title, price} = room
           return(
-            <div>
-              <h1>{title}</h1>
-              <h1>{price}</h1>
-            </div>
+            <div key={index}>
+          <h1>{title}</h1>
+          <h1>{price}</h1>
+        </div>
           )
          })
         }
