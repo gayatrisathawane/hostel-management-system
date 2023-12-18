@@ -52,6 +52,10 @@ const router = createBrowserRouter([
     path: "/adminroom",
     element: <AdminRoomPost/>,
   },
+  {
+    path: "/servise",
+    element: <>servise</>,
+  }
   
 ]);
 

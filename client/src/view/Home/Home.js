@@ -110,7 +110,7 @@ const Home = () => {
 
       </div>
 
-      <h1 className='text-center'>Services</h1>
+     
 
 
 
