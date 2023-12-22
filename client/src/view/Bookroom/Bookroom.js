@@ -8,7 +8,7 @@ function Bookroom() {
 
   const [room, setRoom] = useState({});
   const[candidate,setcandidate]=useState('')
-  // const [search, setSearch] = useState([]);
+  //  const [search, setSearch] = useState([]);
 
   // const searchBooks = async () =>{
   // if(search === ''){
@@ -41,6 +41,7 @@ const user = JSON.parse(localStorage.getItem('user'))
 
 const booknow = async () => {
   try{
+    
   const response = await axios.post('/api/v1/bookrooms', {
     user: user._id,
     room: room._id,
